@@ -25,6 +25,7 @@
 .aiwd-moving-gradient {
   background: linear-gradient(90deg, #ffffff, #38bdf8, #ffffff, #ffffff);
   background-size: 200% auto;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: shimmer 6s linear infinite;
@@ -33,6 +34,7 @@
 .aiwd-moving-gradient-navy {
   background: linear-gradient(90deg, #001e3c, #3b82f6, #001e3c, #001e3c);
   background-size: 200% auto;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: shimmer 6s linear infinite;
@@ -41,6 +43,7 @@
 .aiwd-moving-gradient-white {
   background: linear-gradient(90deg, #ffffff, #38bdf8, #ffffff, #ffffff);
   background-size: 200% auto;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: shimmer 6s linear infinite;
@@ -659,4 +662,126 @@
   .aiwd-cta-card {
     padding: 40px 24px;
   }
+}
+
+
+
+
+
+
+/* ================= HERO WRAPPER ================= */
+
+.aiwd-hero {
+  position: relative;
+  /* Premium radial gradient background matching your screenshot */
+  background: radial-gradient(circle at 50% 90%, #003d73 0%, #001b3a 60%, #000f21 100%);
+  color: #ffffff;
+  padding: 85px 24px 75px 24px; /* Balanced standard spacing */
+  text-align: center;
+  overflow: hidden;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.aiwd-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ================= TYPOGRAPHY & HEADER ================= */
+
+/* Badge at the top */
+.aiwd-hero-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background-color: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  color: #38bdf8;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 28px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Massive, tight-lettering header replicating your reference image */
+.aiwd-hero-title {
+  /* Scales up to 4.25rem on desktop and down to 2.5rem on mobile */
+  font-size: clamp(2.5rem, 5.2vw, 4.25rem); 
+  font-weight: 800; /* Extra bold */
+  line-height: 1.15; /* Tight vertical spacing */
+  color: #ffffff; /* White default text */
+  margin-bottom: 28px;
+  letter-spacing: -0.03em; /* Tight horizontal letter-spacing */
+}
+
+/* Neon Sky Blue Accent Text */
+.aiwd-hero-title-accent {
+  color: #38bdf8 !important; /* Sky Blue */
+  background-color: transparent !important;
+  display: inline !important;
+}
+
+/* Subtext Below Header */
+.aiwd-hero-subtext {
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.85); /* Premium soft white */
+  max-width: 800px;
+  margin: 0 auto 36px auto;
+}
+
+/* ================= CTA BUTTONS ================= */
+
+.aiwd-hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+/* Primary Button (Solid Sky Blue with Dark Navy text) */
+.aiwd-btn-primary {
+  display: inline-block;
+  background-color: #38bdf8;
+  color: #001f3f !important; /* Force high-contrast text */
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.aiwd-btn-primary:hover {
+  background-color: #25aff2;
+}
+
+/* Secondary Button (Outlined) */
+.aiwd-btn-secondary {
+  display: inline-block;
+  background-color: transparent;
+  color: #ffffff !important;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 14px 28px;
+  border: 1.5px solid rgba(73, 188, 244, 0.5); /* Semi-transparent blue border */
+  border-radius: 10px;
+  text-decoration: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.aiwd-btn-secondary:hover {
+  border-color: #38bdf8;
+  background-color: rgba(56, 189, 248, 0.08);
+}
+
+/* Trust text below buttons */
+.aiwd-hero-trust {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.5); /* Muted gray-blue */
+  margin: 0;
 }

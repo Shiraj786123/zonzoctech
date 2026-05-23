@@ -1,6 +1,10 @@
+
+
+
 /* Container Setup */
 .contact-section {
-  background-color: #032b69; /* Exact deep corporate background navy */
+  /* Exact midnight-navy radial gradient from your hero screenshot */
+  background: radial-gradient(circle at 50% 90%, #002244 0%, #000c1e 100%) !important;
   color: #ffffff;
   padding: 80px 40px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -15,15 +19,15 @@
   width: 100%;
   display: flex;
   gap: 60px;
-  /* CRITICAL: Stretches both sides to have the exact same height */
+  /* Stretches both left and right columns to have the exact same height */
   align-items: stretch; 
 }
 
 /* Left Content Styles */
 .contact-left {
-  flex: 1.1;
+  flex: 1 !important; /* Exactly 50% width distribution */
   display: flex;
-  align-items: center; /* Vertically centers the left content within its stretched height */
+  align-items: center; /* Vertically centers content within the stretched height */
 }
 
 .left-inner-wrapper {
@@ -34,31 +38,34 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  background-color: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.25);
   padding: 6px 14px;
-  border-radius: 8px;
+  border-radius: 9999px; /* Modern pill shape badge */
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 32px;
-  color: #ffffff;
+  color: #38bdf8; /* Brand sky blue text */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .contact-title {
-  font-size: 46px;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 24px;
-  letter-spacing: -0.5px;
-  color: #ffffff;
+  font-size: 46px !important;
+  font-weight: 800 !important; /* Extra bold */
+  line-height: 1.15 !important; /* Premium tight line spacing */
+  margin-bottom: 24px !important;
+  letter-spacing: -0.03em !important; /* Tight letter tracking */
+  color: #ffffff !important;
 }
 
 .highlight-text {
-  color: #23b2ee; /* Exact bright light blue shade from your photo */
+  color: #38bdf8 !important; /* Accurate sky blue */
 }
 
 .contact-subtitle {
   font-size: 16px;
-  color: #dae4f0; /* Muted slate white text style */
+  color: rgba(255, 255, 255, 0.75); /* Soft white text */
   line-height: 1.6;
   margin-bottom: 48px;
   max-width: 520px;
@@ -91,9 +98,9 @@
 }
 
 .step-number-box {
-  background-color: #23b2ee; /* Vivid light blue background */
-  color: #ffffff;
-  font-weight: 700;
+  background-color: #38bdf8; /* Vivid light blue background */
+  color: #000080; /* Dark contrast navy text */
+  font-weight: 800;
   font-size: 14px;
   width: 44px;
   height: 44px;
@@ -127,14 +134,15 @@
 
 .step-desc {
   font-size: 14px;
-  color: #adc2dd; /* Muted blue text for descriptions */
+  color: rgba(255, 255, 255, 0.7); /* Muted text for descriptions */
   margin: 0;
 }
 
 /* Right Content Form Card */
 .contact-right {
-  flex: 0.9;
+  flex: 1 !important; /* Exactly 50% width distribution */
   display: flex;
+  align-items: stretch; /* Forces form card to stretch vertically to match left column height */
 }
 
 .form-card {
@@ -142,17 +150,25 @@
   border-radius: 20px;
   padding: 48px;
   width: 100%;
+  height: 100%; /* Stretches card height to 100% of parent container */
+  box-sizing: border-box; /* Includes padding in height calculation */
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
   display: flex;
-  flex-direction: column;
-  justify-content: center; /* Keeps internal form contents balanced */
+  flex-direction: column; /* Flows downward naturally without pushing spaces */
 }
 
 .form-title {
-  color: #002663; /* Deep navy text for the white card titles */
+  color: midnightblue; /* Classic navy blue title text */
   font-size: 26px;
   font-weight: 700;
+  margin-top: 0;
   margin-bottom: 28px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Form expands to absorb the card height */
 }
 
 .form-grid {
@@ -166,7 +182,11 @@
   position: relative;
 }
 
+/* Expanding Textarea wrapper to eliminate blank vertical gaps */
 .textarea-group {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Expands to absorb the remaining vertical space of the stretched card */
   margin-bottom: 28px;
 }
 
@@ -190,7 +210,7 @@
   border: 1px solid #e1e8f0;
   border-radius: 12px;
   font-size: 15px;
-  color: #032b69;
+  color: #000080; /* Text input colors matched to navy */
   background-color: #ffffff;
   outline: none;
   box-sizing: border-box;
@@ -204,18 +224,20 @@
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: #23b2ee;
+  border-color: #38bdf8;
 }
 
 .contact-form textarea {
   resize: none;
+  flex-grow: 1; /* Textarea fills the expanded height cleanly */
+  min-height: 140px; /* Safe mobile height constraint */
 }
 
-/* CTA Submit Button styling */
+/* CTA Submit Button (Styled in classic Navy Blue background) */
 .submit-btn {
   width: 100%;
-  background-color: #0062df; /* Vibrant blue CTA button block color */
-  color: #ffffff;
+  background-color: rgb(37, 37, 80) !important; /* Classic navy blue background */
+  color: #ffffff !important; /* White text */
   border: none;
   padding: 18px;
   font-size: 16px;
@@ -226,11 +248,11 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  transition: background 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 
 .submit-btn:hover {
-  background-color: #0050b8;
+  background-color:  #2c2ca0 !important; /* Deeper navy blue on hover */
 }
 
 .submit-note {
@@ -273,4 +295,38 @@
   .contact-title {
     font-size: 32px;
   }
+}
+
+
+/* ================= INPUT ICONS COLOR STYLING ================= */
+
+.input-icon {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  /* Changed from gray (#708599) to your vibrant brand Sky Blue */
+  color: #38bdf8 !important; 
+  font-size: 18px;
+  transition: color 0.2s ease; /* Smooth color transition on focus */
+  pointer-events: none; /* Ensures clicking the icon still focuses the input */
+}
+
+/* Specific alignment for the textarea message icon */
+.textarea-icon {
+  top: 26px !important;
+  transform: none !important;
+}
+
+/* ================= INTERACTIVE FOCUS STATES ================= */
+
+/* Dynamically changes the icon to deep classic Navy Blue when the input is focused */
+.form-group:focus-within .input-icon {
+  color: #000080 !important;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #38bdf8 !important; /* Highlights active border in sky blue */
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.1) !important; /* Soft sky blue glow */
 }

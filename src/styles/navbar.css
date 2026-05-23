@@ -117,7 +117,7 @@
   font-weight: 600 !important;
 }
 
-/* CTA */
+/* CTA BUTTONS */
 .get-proposal-button {
   background: #00448f;
   color: white;
@@ -131,6 +131,11 @@
   white-space: nowrap;
 }
 .get-proposal-button:hover { background: #00336b; transform: translateY(-2px); }
+
+/* Hidden on desktop viewports */
+.mobile-nav-cta {
+  display: none;
+}
 
 /* HAMBURGER */
 .hamburger {
@@ -161,7 +166,12 @@
 .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-.mobile-cta { display: none; }
+
+/* Hidden on desktop viewports */
+.mobile-email-bar,
+.mobile-navbar-home { 
+  display: none; 
+}
 
 /* TABLET / MOBILE */
 @media (max-width: 1024px) {
@@ -179,6 +189,47 @@
   .hamburger.open span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
 
   .desktop-cta { display: none; }
+
+  /* Activates mobile-nav-cta in the white bar on smaller viewports */
+  .mobile-nav-cta {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    z-index: 10000;
+  }
+
+  /* Exclude Home link item inside mobile drawer menu container list */
+  .desktop-only-home-link {
+    display: none !important;
+  }
+
+  /* Activates Home button with text on the main navbar for mobile viewports */
+  .mobile-navbar-home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;                      /* Clean spacing between Home icon and word */
+    font-size: 15px;               
+    font-weight: 600;
+    color: #00448f;
+    padding: 8px 12px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    z-index: 10000;
+    margin-left: auto;             /* Groups the 3 right-side buttons together */
+  }
+  .mobile-navbar-home svg {
+    font-size: 18px;               /* Icon size proportional to text */
+  }
+  .mobile-navbar-home:hover {
+    color: #00336b;
+  }
+
+  /* Set consistent gaps on mobile headers */
+  .navbar-inner {
+    padding: 0 24px;
+    gap: 12px !important;          /* Sets a consistent, clean gap between the 3 buttons */
+  }
 
   .nav-container {
     position: fixed;
@@ -202,6 +253,7 @@
     gap: 4px;
     width: 100%;
     align-items: stretch;
+    padding-top: 12px;
   }
   .nav-link {
     width: 100%;
@@ -242,10 +294,26 @@
   .mega-heading { margin: 12px 0 8px; font-size: 15px; }
   .mega-col a { padding: 10px 8px; font-size: 14px; }
 
-  .mobile-cta {
-    display: block;
+  /* Mobile Email link bar designed beautifully to match bottom position */
+  .mobile-email-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #00448f;
+    color: white;
+    text-decoration: none;
+    padding: 14px 26px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 40px; /* Separates the links list from bottom button as outlined */
     width: 100%;
-    margin-top: 20px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+  }
+  .mobile-email-bar:hover {
+    background: #00336b;
   }
 }
 
@@ -266,19 +334,48 @@
   /* Scaled up the logo width under 1024px viewports */
   .navbar-logo img { width: 165px !important; } /* Increased from 140px */
 }
+
+/* Scales layout dynamically on smaller phone screens to prevent overflow or wrapping */
 @media (max-width: 480px) {
-  .navbar-inner { padding: 0 16px; }
-  /* Scaled up the logo width under 480px phone viewports */
-  .navbar-logo img { width: 145px !important; } /* Increased from 120px */
+  .navbar-inner { 
+    padding: 0 16px; 
+    gap: 8px !important; /* Slightly tighter uniform gap on narrow mobile screens */
+  }
+  /* Scaled logo dynamically to allow home icon + text link to sit cleanly on same row */
+  .navbar-logo img { 
+    width: 125px !important; 
+    margin-left: -15px !important;
+  }
+  
+  .mobile-navbar-home {
+    font-size: 13px !important;
+    padding: 6px 4px !important;
+    gap: 4px !important;
+    margin-left: auto !important;
+  }
+  .mobile-navbar-home svg {
+    font-size: 15px !important;
+  }
+  
+  .mobile-nav-cta {
+    padding: 8px 12px !important;
+    font-size: 12px !important;
+  }
+  .hamburger {
+    font-size: 24px !important;
+    padding: 4px 4px !important;
+    width: 32px !important;
+    height: 32px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .mobile-nav-cta {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
 }
 
 .sky-blue {
    color: skyblue;
 }
-
-
-
-
-
-
-

@@ -2022,3 +2022,337 @@
     font-size: 14px;
   }
 }
+
+
+
+
+
+
+/* ================= HERO WRAPPER ================= */
+
+section.wm__hero {
+  position: relative !important;
+  /* Premium glowing midnight-navy background */
+  background: radial-gradient(circle at 50% 90%, #002244 0%, #000c1e 100%) !important;
+  color: #ffffff !important;
+  padding: 95px 24px 85px 24px !important; /* Balanced standard vertical padding */
+  text-align: center !important;
+  overflow: hidden !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  width: 100% !important;
+  display: block !important;
+}
+
+/* Hides overlapping busy decorative layers to focus on the gradient glow */
+.wm__hero_pattern {
+  display: none !important;
+}
+
+/* Scopes container styling to the hero to prevent other sections from shrinking */
+section.wm__hero .wm__hero_container {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  position: relative !important;
+  z-index: 1 !important;
+  display: block !important;
+}
+
+/* ================= TYPOGRAPHY ================= */
+
+/* Massive, tight-lettering header styling */
+section.wm__hero .wm__hero_title {
+  font-size: 64px !important; /* Solid desktop heading size */
+  font-weight: 800 !important; /* Extra bold */
+  line-height: 1.15 !important; /* Tight line height */
+  color: #ffffff !important; /* Forces white text so it is visible */
+  margin-bottom: 28px !important;
+  letter-spacing: -0.03em !important; /* Tight letter spacing */
+  margin-top: 0 !important;
+}
+
+/* Sky-Blue Accent Text */
+section.wm__hero .wm__hero_title_highlight {
+  color: #38bdf8 !important; /* Sky Blue accent */
+  background-color: transparent !important; /* Overrides global highlight classes */
+  display: inline !important;
+}
+
+/* Supporting Hero Text */
+section.wm__hero .wm__hero_text {
+  font-size: 1.15rem !important;
+  line-height: 1.65 !important;
+  color: rgba(255, 255, 255, 0.85) !important; /* Premium soft white */
+  max-width: 800px !important;
+  margin: 0 auto 36px auto !important;
+  display: block !important;
+}
+
+/* ================= CTA BUTTONS ================= */
+
+section.wm__hero .hero-buttons {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 16px !important;
+  margin-bottom: 32px !important;
+  flex-wrap: wrap !important;
+}
+
+/* Primary Button (Solid Sky Blue with Dark Navy text) */
+section.wm__hero .btn-primary {
+  display: inline-block !important;
+  background-color: #38bdf8 !important;
+  color: #001f3f !important; /* Force high-contrast text color */
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  padding: 14px 28px !important;
+  border-radius: 10px !important;
+  text-decoration: none !important;
+  transition: background-color 0.2s ease !important;
+}
+
+section.wm__hero .btn-primary:hover {
+  background-color: #25aff2 !important;
+}
+
+/* Secondary Button (Outlined) */
+section.wm__hero .btn-secondary {
+  display: inline-block !important;
+  background-color: transparent !important;
+  color: #ffffff !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  padding: 14px 28px !important;
+  border: 1.5px solid rgba(73, 188, 244, 0.5) !important; /* Semi-transparent blue border */
+  border-radius: 10px !important;
+  text-decoration: none !important;
+  transition: border-color 0.2s ease, background-color 0.2s ease !important;
+}
+
+section.wm__hero .btn-secondary:hover {
+  border-color: #38bdf8 !important;
+  background-color: rgba(56, 189, 248, 0.08) !important;
+}
+
+/* Trust text below buttons */
+section.wm__hero .wm__hero_trust {
+  font-size: 0.875rem !important;
+  color: rgba(255, 255, 255, 0.5) !important; /* Muted gray-blue */
+  margin: 0 !important;
+  display: block !important;
+}
+
+/* ================= MEDIA QUERIES ================= */
+
+@media (max-width: 1024px) {
+  section.wm__hero .wm__hero_title {
+    font-size: 48px !important; /* Balanced tablet size */
+  }
+}
+
+@media (max-width: 640px) {
+  section.wm__hero .wm__hero_title {
+    font-size: 36px !important; /* Legible mobile size */
+    line-height: 1.2 !important;
+  }
+}
+
+
+
+
+/* ================= OUTER SECTION WRAPPER ================= */
+
+section.cta-section {
+  position: relative !important;
+  background-color: #001227 !important; /* Solid dark navy background matching other sections */
+  padding: 80px 24px !important; /* Spacious wrapper padding */
+  text-align: center !important;
+  width: 100% !important;
+  display: block !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+/* ================= GRADIENT FLOATING CARD ================= */
+
+/* Scoped specifically to .cta-section to prevent global container shrinking */
+section.cta-section .wm__container {
+  width: 100% !important;
+  max-width: 1100px !important; /* Constrains card horizontal length */
+  margin: 0 auto !important;
+  /* Beautiful inner-card blue-to-dark gradient matching the reference image */
+  background: linear-gradient(135deg, #093b70 0%, #031e3d 100%) !important; 
+  border: 1px solid rgba(255, 255, 255, 0.1) !important; /* Subtle outer border */
+  border-radius: 28px !important; /* Smooth highly rounded card corners */
+  padding: 64px 40px !important; /* Balanced spacious inside padding */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15) !important;
+  position: relative !important;
+  z-index: 1 !important;
+  display: block !important;
+}
+
+/* ================= CARD CONTENT TYPOGRAPHY ================= */
+
+section.cta-section h2 {
+  font-size: 2.5rem !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+  margin-top: 0 !important;
+  margin-bottom: 20px !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.2 !important;
+  text-align: center !important;
+}
+
+section.cta-section .wm__container > p:not(.cta-small-text) {
+  font-size: 1.15rem !important;
+  line-height: 1.6 !important;
+  color: rgba(255, 255, 255, 0.8) !important; /* Soft, premium white */
+  max-width: 820px !important;
+  margin: 0 auto 36px auto !important;
+  text-align: center !important;
+  display: block !important;
+}
+
+/* ================= BUTTONS LAYOUT ================= */
+
+section.cta-section .cta-buttons {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 16px !important;
+  margin-bottom: 28px !important; /* Spacing down to the trust label */
+  flex-wrap: wrap !important;
+}
+
+/* Primary Button (Solid White with Dark Blue text) */
+section.cta-section .btn-primary {
+  display: inline-block !important;
+  background-color: #ffffff !important;
+  color: #031e3d !important; /* High contrast text matching the card background */
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  padding: 14px 28px !important;
+  border-radius: 10px !important;
+  text-decoration: none !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08) !important;
+  transition: background-color 0.2s ease, transform 0.2s ease !important;
+}
+
+section.cta-section .btn-primary:hover {
+  background-color: #f1f5f9 !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Secondary Button (Outlined White) */
+section.cta-section .btn-secondary {
+  display: inline-block !important;
+  background-color: transparent !important;
+  color: #ffffff !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  padding: 14px 28px !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 10px !important;
+  text-decoration: none !important;
+  transition: border-color 0.2s ease, background-color 0.2s ease !important;
+}
+
+section.cta-section .btn-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.8) !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* ================= TRUST TEXT ================= */
+
+
+
+ /* Centered trust subtext directly below buttons */
+section.cta-section .cta-small-text {
+  display: block !important;
+  width: 100% !important; /* Forces the text element to span the full width of the card */
+  text-align: center !important; /* Horizontally centers the text */
+  margin: 0 auto !important; /* Centers the block itself */
+  padding: 0 !important;
+  font-size: 0.875rem !important;
+  color: rgba(255, 255, 255, 0.5) !important; /* Muted gray-blue */
+}
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  section.cta-section .wm__container {
+    padding: 48px 24px !important; /* Tighter padding on mobile screens */
+    border-radius: 20px !important;
+  }
+  section.cta-section h2 {
+    font-size: 1.85rem !important;
+  }
+}
+
+
+
+/* ================= PILL BADGE LABEL ================= */
+
+section.wm__hero .wm-hero-badge-wrapper {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important; /* Space between dot and text */
+  padding: 6px 14px !important;
+  background: rgba(56, 189, 248, 0.08) !important; /* Soft sky-blue background tint */
+  background-color: rgba(56, 189, 248, 0.08) !important;
+  border: 1px solid rgba(56, 189, 248, 0.25) !important; /* Soft border edge */
+  border-radius: 9999px !important; /* Pill shape */
+  margin-bottom: 28px !important;
+  box-shadow: none !important;
+  width: auto !important;
+}
+
+section.wm__hero .wm-hero-badge-dot {
+  width: 8px !important;
+  height: 8px !important;
+  background-color: #38bdf8 !important; /* Active sky-blue color */
+  border-radius: 50% !important;
+  display: inline-block !important;
+  position: relative !important;
+}
+
+/* Glowing outer pulse ring */
+section.wm__hero .wm-hero-badge-dot::after {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 50% !important;
+  background-color: #38bdf8 !important;
+  animation: wmBadgePulse 2s infinite ease-in-out !important;
+}
+
+section.wm__hero .wm-hero-badge-text {
+  color: #38bdf8 !important;
+  font-size: 0.825rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  line-height: 1 !important;
+  
+  /* FORCE STRIP GLOBAL BACKGROUND CONFLICTS */
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  display: inline-block !important;
+}
+
+@keyframes wmBadgePulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}

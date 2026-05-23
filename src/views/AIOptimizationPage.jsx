@@ -21,14 +21,14 @@ const AISearchOptimization = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  const stats =[
+  const stats = [
     { number: "150+", label: "Projects Delivered" },
     { number: "120+", label: "Clients Served" },
     { number: "35%", label: "Average Traffic Growth" },
     { number: "4.9★", label: "Client Rating" },
   ];
 
-  const comparisonData =[
+  const comparisonData = [
     { traditional: "Optimizes for Google blue links only", ai: "Optimizes for Google AND AI platforms" },
     { traditional: "Keyword ranking focused", ai: "Entity and intent focused" },
     { traditional: "Click-through traffic dependent", ai: "Visible in AI-generated answers" },
@@ -37,7 +37,7 @@ const AISearchOptimization = () => {
     { traditional: "Falling effectiveness year on year", ai: "Future-proof visibility strategy" },
   ];
 
-  const whyChoose =[
+  const whyChoose = [
     { title: "✅ Early Mover Advantage", description: "Most agencies are still catching up with AI search. ZonzocTech has been optimising for generative and answer engines since their emergence — giving our clients a significant head start over competitors still focused on traditional SEO alone." },
     { title: "✅ Combined Traditional & AI SEO", description: "We don't abandon what works. Traditional Google SEO still drives significant traffic and our strategies combine proven SEO fundamentals with cutting-edge AI search optimization — covering every channel where your customers search." },
     { title: "✅ Business-Focused Visibility", description: "AI search visibility means nothing if it doesn't drive business outcomes. Every optimization we make is tied back to leads, enquiries and revenue — not just impressions or citations." },
@@ -45,7 +45,7 @@ const AISearchOptimization = () => {
     { title: "✅ Transparent Reporting", description: "We track and report on AI visibility, traditional rankings, organic traffic and business leads — giving you a clear picture of how our work is impacting your growth." },
   ];
 
-  const processSteps =[
+  const processSteps = [
     { number: "01", title: "AI Search Visibility Audit", description: "We audit how your website currently appears in AI-generated search answers, Google AI Overviews, featured snippets and traditional rankings — identifying the biggest visibility gaps and opportunities." },
     { number: "02", title: "Entity & Content Mapping", description: "We map your business entities, key topics and target questions — building a clear picture of the content and signals needed to establish authority in your niche." },
     { number: "03", title: "Technical & Schema Optimization", description: "We implement structured data, fix technical issues and optimise your site architecture for both traditional and AI search crawlability." },
@@ -53,7 +53,7 @@ const AISearchOptimization = () => {
     { number: "05", title: "Monitor, Report & Adapt", description: "AI search is evolving rapidly. We monitor your visibility across all platforms, report on progress monthly and continuously adapt your strategy as AI search develops." },
   ];
 
-  const whoFor =[
+  const whoFor = [
     { title: "✓ Businesses Losing Traffic to AI Overviews", description: "Whose organic traffic has declined as Google AI Overviews answer more queries without clicks — and need to adapt their strategy urgently." },
     { title: "✓ UK & USA Service Businesses", description: "Who rely on organic search leads and need to appear in AI-generated answers when customers search for their services." },
     { title: "✓ E-commerce Brands", description: "Who need product and brand visibility in AI shopping recommendations and generative search results." },
@@ -61,7 +61,7 @@ const AISearchOptimization = () => {
     { title: "✓ Forward-Thinking Businesses", description: "Who want to establish AI search visibility now — before competitors catch on and the space becomes more competitive." },
   ];
 
-  const faqs =[
+  const faqs = [
     { question: "What is generative engine optimization?", answer: "Generative engine optimization or GEO is the process of optimizing your website content and structure so AI-powered search engines like ChatGPT, Perplexity and Google AI Overviews cite your business as a trusted source in their generated answers. It is one of the most important emerging disciplines in digital marketing." },
     { question: "What is answer engine optimization?", answer: "Answer engine optimization or AEO focuses on structuring content to win direct answer positions — Google featured snippets, People Also Ask results, voice search responses and AI Overview citations. The goal is to be the answer — not just a result on a list." },
     { question: "Is traditional SEO still important?", answer: "Yes — absolutely. Traditional Google SEO still drives significant traffic and remains essential. AI search optimization works alongside traditional SEO — not instead of it. Businesses that combine both have the strongest overall search visibility." },
@@ -74,41 +74,53 @@ const AISearchOptimization = () => {
     <>
       <div className="aiso__wrapper">
         <Navbar />
-        <Breadcrumb />
 
         {/* Hero Section */}
-   <section className="aiso__hero">
-  <div className="aiso__hero_background">
-    <div className="aiso__hero_circle aiso__circle_1"></div>
-    <div className="aiso__hero_circle aiso__circle_2"></div>
-    <div className="aiso__hero_circle aiso__circle_3"></div>
-  </div>
+        <section className="aiso__hero">
+          {/* Pattern container left in case you need it later, but hidden via CSS */}
+          <div className="aiso__hero_background">
+            <div className="aiso__hero_circle aiso__circle_1"></div>
+            <div className="aiso__hero_circle aiso__circle_2"></div>
+            <div className="aiso__hero_circle aiso__circle_3"></div>
+          </div>
 
-  <div className="aiso__hero_container">
+          <div className="aiso__hero_container">
+            {/* MOVED BREADCRUMB HERE: Renders inside the dark container above the badge */}
+            <Breadcrumb />
 
-    <h1 className="aiso__hero_title">
-      AI Search Optimization Agency Helping Businesses Appear in Google AI, ChatGPT & Generative Search Results
-    </h1>
+            {/* Top Label / Pill Badge with Safe inline-span wrapper */}
+            <span className="aiso-hero-badge-wrapper">
+              <span className="aiso-hero-badge-dot"></span>
+              <span className="aiso-hero-badge-text">
+                AI Search Optimization Agency
+              </span>
+            </span>
 
-    <p className="aiso__hero_text">
-      Search has evolved beyond traditional Google rankings. We help businesses stay visible across AI-powered platforms like ChatGPT, Perplexity, and Google AI Overviews — where customers now get answers directly.
-    </p>
+            {/* Mixed color heading using inline span */}
+            <h1 className="aiso__hero_title">
+              AI Search Optimization Agency Helping Businesses Appear in <span className="aiso__hero_title_highlight">Google AI, ChatGPT & Generative Search Results</span>
+            </h1>
 
-    <div className="hero-buttons">
-      <a href="/contact" className="btn-primary">
-        Get Free AI Search Audit →
-      </a>
-      <a href="#aiso-how" className="btn-secondary">
-        See How It Works ↓
-      </a>
-    </div>
+            <p className="aiso__hero_text">
+              Search has evolved beyond traditional Google rankings. We help businesses stay visible across AI-powered platforms like ChatGPT, Perplexity, and Google AI Overviews — where customers now get answers directly.
+            </p>
 
-    <p className="hero-trust-text">
-      Trusted by 120+ businesses across UK, USA & Europe
-    </p>
+            <div className="hero-buttons">
+              <a href="/contact" className="btn-primary">
+                Get Free AI Search Audit →
+              </a>
+              <a href="#aiso-how" className="btn-secondary">
+                See How It Works ↓
+              </a>
+            </div>
 
-  </div>
-</section>
+            <p className="hero-trust-text">
+              Trusted by 120+ businesses across UK, USA & Europe
+            </p>
+
+          </div>
+        </section>
+        
         {/* Stats Bar */}
         <section className="stats-bar" id="aiso-how">
           {stats.map((stat, i) => (
@@ -120,109 +132,110 @@ const AISearchOptimization = () => {
         </section>
 
         {/* Section 1 — New Reality of Search */}
-       <section className="aiso-s1">
-  <div className="aiso-container">
+        <section className="aiso-s1">
+          <div className="aiso-container">
 
-    {/* SECTION HEADER */}
-    <div className="aiso-s1__header">
-      <span className="aiso-s1__badge">
-        AI Search Is Changing SEO
-      </span>
+            {/* SECTION HEADER */}
+            <div className="aiso-s1__header">
+              <span className="aiso-s1__badge">
+                AI Search Is Changing SEO
+              </span>
 
-      <h2 className="aiso-s1__title">
-        The New Reality of Search — Why Traditional SEO Is No Longer Enough
-      </h2>
+              <h2 className="aiso-s1__title">
+                The New Reality of Search — Why Traditional SEO Is No Longer Enough
+              </h2>
 
-      <p className="aiso-s1__intro">
-        For decades, SEO meant ranking on Google's blue links. Today, customers
-        ask ChatGPT, Google AI Overviews and Perplexity for direct answers.
-        Businesses that fail to adapt are losing visibility every day.
-      </p>
-    </div>
+              <p className="aiso-s1__intro">
+                For decades, SEO meant ranking on Google's blue links. Today, customers
+                ask ChatGPT, Google AI Overviews and Perplexity for direct answers.
+                Businesses that fail to adapt are losing visibility every day.
+              </p>
+            </div>
 
-    {/* STATS */}
-    <div className="aiso-s1__stats">
+            {/* STATS */}
+            <div className="aiso-s1__stats">
 
-      <div className="aiso-s1__stat-card">
-        <span className="aiso-s1__stat-number">60%</span>
-        <span className="aiso-s1__stat-label">
-          Searches Answered Directly by AI
-        </span>
-      </div>
+              <div className="aiso-s1__stat-card">
+                <span className="aiso-s1__stat-number">60%</span>
+                <span className="aiso-s1__stat-label">
+                  Searches Answered Directly by AI
+                </span>
+              </div>
 
-      <div className="aiso-s1__stat-card">
-        <span className="aiso-s1__stat-number">0 Clicks</span>
-        <span className="aiso-s1__stat-label">
-          Many Searches End Without Website Visits
-        </span>
-      </div>
+              <div className="aiso-s1__stat-card">
+                <span className="aiso-s1__stat-number">0 Clicks</span>
+                <span className="aiso-s1__stat-label">
+                  Many Searches End Without Website Visits
+                </span>
+              </div>
 
-      <div className="aiso-s1__stat-card">
-        <span className="aiso-s1__stat-number">24/7</span>
-        <span className="aiso-s1__stat-label">
-          AI Platforms Answer Customer Questions
-        </span>
-      </div>
+              <div className="aiso-s1__stat-card">
+                <span className="aiso-s1__stat-number">24/7</span>
+                <span className="aiso-s1__stat-label">
+                  AI Platforms Answer Customer Questions
+                </span>
+              </div>
 
-      <div className="aiso-s1__stat-card">
-        <span className="aiso-s1__stat-number">Future</span>
-        <span className="aiso-s1__stat-label">
-          Businesses Must Optimise Beyond Google
-        </span>
-      </div>
+              <div className="aiso-s1__stat-card">
+                <span className="aiso-s1__stat-number">Future</span>
+                <span className="aiso-s1__stat-label">
+                  Businesses Must Optimise Beyond Google
+                </span>
+              </div>
 
-    </div>
+            </div>
 
-    {/* CONTENT */}
-    <div className="aiso-s1__content">
+            {/* CONTENT */}
+            <div className="aiso-s1__content">
 
-      <p>
-        Google now answers many searches directly inside AI Overviews — without
-        users clicking through to websites. ChatGPT and Perplexity provide
-        millions of business recommendations every day.
-      </p>
+              <p>
+                Google now answers many searches directly inside AI Overviews — without
+                users clicking through to websites. ChatGPT and Perplexity provide
+                millions of business recommendations every day.
+              </p>
 
-      <p>
-        This means your business must be optimised not just for rankings, but to
-        be cited and recommended by AI search engines.
-      </p>
+              <p>
+                This means your business must be optimised not just for rankings, but to
+                be cited and recommended by AI search engines.
+              </p>
 
-    </div>
+            </div>
 
-    {/* COMPARISON TITLE */}
-    <h3 className="aiso-s1__comparison-title">
-      Traditional SEO vs AI Search Optimization
-    </h3>
+            {/* COMPARISON TITLE */}
+            <h3 className="aiso-s1__comparison-title">
+              Traditional SEO vs AI Search Optimization
+            </h3>
 
-    {/* TABLE */}
-    <div className="aiso-s1__table">
+            {/* TABLE */}
+            <div className="aiso-s1__table">
 
-      <div className="aiso-s1__table-header">
-        <div className="aiso-s1__table-head">
-          Traditional SEO Only
-        </div>
+              <div className="aiso-s1__table-header">
+                <div className="aiso-s1__table-head">
+                  Traditional SEO Only
+                </div>
 
-        <div className="aiso-s1__table-head aiso-s1__table-head--highlight">
-          AI Search Optimization
-        </div>
-      </div>
+                <div className="aiso-s1__table-head aiso-s1__table-head--highlight">
+                  AI Search Optimization
+                </div>
+              </div>
 
-      {comparisonData.map((row, i) => (
-        <div className="aiso-s1__table-row" key={i}>
-          <div className="aiso-s1__table-cell">
-            {row.traditional}
+              {comparisonData.map((row, i) => (
+                <div className="aiso-s1__table-row" key={i}>
+                  <div className="aiso-s1__table-cell">
+                    {row.traditional}
+                  </div>
+
+                  <div className="aiso-s1__table-cell aiso-s1__table-cell--highlight">
+                    {row.ai}
+                  </div>
+                </div>
+              ))}
+
+            </div>
+
           </div>
-
-          <div className="aiso-s1__table-cell aiso-s1__table-cell--highlight">
-            {row.ai}
-          </div>
-        </div>
-      ))}
-
-    </div>
-
-  </div>
-</section>
+        </section>
+        
         {/* Section 2 — Ecosystem */}
         <section className="s2-wrapper">
           <div className="s2-container">
@@ -267,9 +280,10 @@ const AISearchOptimization = () => {
             </div>
           </div>
         </section>
+        
         <div className="section-bridge">
-  <span>Our Proven AI Search Optimization Process</span>
-</div>
+          <span>Our Proven AI Search Optimization Process</span>
+        </div>
 
         {/* Section 4 — Process */}
         <section className="s4-wrapper">
@@ -311,8 +325,8 @@ const AISearchOptimization = () => {
         </section>
 
         <div className="section-bridge faq-bridge">
-  <span>Still Have Questions? Let’s Make It Clear</span>
-</div>
+          <span>Still Have Questions? Let’s Make It Clear</span>
+        </div>
 
         {/* Section 6 — FAQ */}
         <section className="faq-wrapper">
@@ -345,11 +359,20 @@ const AISearchOptimization = () => {
         <section className="cta-section">
           <div className="aiso__container">
             <h2>Ready to Be Found Everywhere Your Customers Search?</h2>
-            <p>Get a free AI search visibility audit and find out how your business appears across Google, ChatGPT, Perplexity and AI-powered search — no commitment required.</p>
+            
+            <p>
+              Get a free AI search visibility audit and find out how your business appears across Google, ChatGPT, Perplexity and AI-powered search — no commitment required.
+            </p>
+            
             <div className="cta-buttons">
               <a href="/contact" className="btn-primary">Get Free AI Search Audit →</a>
               <a href="/seo-services" className="btn-secondary">View Our SEO Services</a>
             </div>
+
+            {/* Added trust text structure matching the image */}
+            <p className="cta-subtext-muted">
+              No commitment • No spam • Just real strategy
+            </p>
           </div>
         </section>
 

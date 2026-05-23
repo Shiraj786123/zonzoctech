@@ -1,8 +1,33 @@
+import ScrollToTop from "@/src/components/ScrollToTop"; // Import the scroll component
+
+import { Inter, Syne, DM_Sans } from 'next/font/google'; // Import the fonts natively
 import { AuthProvider } from '@/src/context/AuthContext';
 import WhatsappFloat from '@/src/components/WhatsappFloat';
 import '@/src/index.css';
 import '@/src/App.css';
 import '@/src/styles/service-shared.css';
+
+// Configure the font classes and weights
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-b', // Maps Inter to your body font variable if desired
+  display: 'swap',
+});
+
+const syne = Syne({
+  subsets: ['latin'],
+  weight: ['400', '600', '700', '800'],
+  variable: '--font-h', // Maps Syne to your heading font variable
+  display: 'swap',
+});
+
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  weight: ['300', '400', '500'],
+  variable: '--font-dm', // Auxiliary variable
+  display: 'swap',
+});
 
 export const metadata = {
   title: {
@@ -26,19 +51,18 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${syne.variable} ${dmSans.variable}`}>
       <head>
-        {/* MANUAL FAVICON DECLARATION (using the correct single-n spelling) */}
+        {/* Next.js automatically handles link preconnect and stylesheet optimization */}
         <link rel="icon" href="/zonzotech-favicon.png?v=2" type="image/png" />
-        
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
       </head>
       <body>
         <AuthProvider>
           {children}
           <WhatsappFloat />
+          
+          {/* ScrollToTop component positioned globally */}
+          <ScrollToTop /> 
         </AuthProvider>
       </body>
     </html>

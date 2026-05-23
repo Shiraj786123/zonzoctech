@@ -70,61 +70,60 @@ const AIWebsiteDesign = () => {
   };
 
   const examples = [
-  "Intelligent dashboards & reporting",
-  "AI-powered SaaS platforms",
-  "GPT-powered customer tools",
-  "Automated lead qualification",
-  "AI recommendation engines",
-  "Internal workflow automation",
-  "Predictive analytics platforms",
-  "AI chatbots & virtual assistants",
-];
+    "Intelligent dashboards & reporting",
+    "AI-powered SaaS platforms",
+    "GPT-powered customer tools",
+    "Automated lead qualification",
+    "AI recommendation engines",
+    "Internal workflow automation",
+    "Predictive analytics platforms",
+    "AI chatbots & virtual assistants",
+  ];
 
   return (
     <div className="aiwd-master-wrapper">
       <Navbar />
-      <Breadcrumb />
 
       {/* --- HERO --- */}
-     {/* ================= HERO SECTION (STATIC) ================= */}
-<section className="aiwd-hero">
-  <div className="aiwd-container">
-    <div className="aiwd-hero-content">
-      {/* Badge */}
-      <span className="aiwd-hero-badge">
-        AI Web Design & Development Agency
-      </span>
+      <section className="aiwd-hero">
+        <div className="aiwd-container">
+          <div className="aiwd-hero-content">
+            {/* MOVED BREADCRUMB HERE: Centers inside the dark hero wrapper above everything else */}
+            <Breadcrumb />
 
-      {/* Heading */}
-      <h1 className="aiwd-hero-title">
-        AI Website Design That Turns Visitors Into Customers
-      </h1>
+            {/* Badge */}
+            <span className="aiwd-hero-badge">
+              AI Web Design & Development Agency
+            </span>
 
-      {/* Subtext */}
-      <p className="aiwd-hero-subtext">
-        We build high-converting AI-powered websites for UK & USA businesses —
-        combining modern UI, conversion psychology, and performance engineering.
-      </p>
+            {/* Heading split specifically at 'Visitors Into Customers' */}
+            <h1 className="aiwd-hero-title">
+              AI Website Design That Turns <span className="aiwd-hero-title-accent">Visitors Into Customers</span>
+            </h1>
 
-      {/* CTA Buttons */}
-      <div className="aiwd-hero-actions">
-        <a href="/contact" className="aiwd-btn-primary">
-          Get Free Consultation
-        </a>
-        <a href="#work" className="aiwd-btn-secondary">
-          View Our Work
-          →
+            {/* Subtext */}
+            <p className="aiwd-hero-subtext">
+              We build high-converting AI-powered websites for UK & USA businesses —
+              combining modern UI, conversion psychology, and performance engineering.
+            </p>
 
-        </a>
-      </div>
+            {/* CTA Buttons */}
+            <div className="aiwd-hero-actions">
+              <a href="/contact" className="aiwd-btn-primary">
+                Get Free Consultation
+              </a>
+              <a href="#work" className="aiwd-btn-secondary">
+                View Our Work →
+              </a>
+            </div>
 
-      {/* Trust Text */}
-      <p className="aiwd-hero-trust">
-        Trusted by 120+ businesses across the UK, USA & Europe
-      </p>
-    </div>
-  </div>
-</section>
+            {/* Trust Text */}
+            <p className="aiwd-hero-trust">
+              Trusted by 120+ businesses across the UK, USA & Europe
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* --- STATS --- */}
       <section className="aiwd-stats-bar" id="work">
@@ -141,59 +140,55 @@ const AIWebsiteDesign = () => {
         </div>
       </section>
 
-      {/* --- WHY FAIL --- */}
-   
+      {/* SECTION 3 - INTRO / AI EXPLANATION */}
+      <section className="aiwd-intro-section">
+        <div className="aiwd-container">
 
+          {/* Title */}
+          <div className="aiwd-section-head">
+            <h2 className="aiwd-section-title">
+              What Is AI Web Application Development?
+            </h2>
 
-{/* SECTION 3 - INTRO / AI EXPLANATION */}
-<section className="aiwd-intro-section">
-  <div className="aiwd-container">
+            <p className="aiwd-section-subtext">
+              AI web applications combine modern web systems with machine learning and LLMs to automate tasks, improve decisions, and deliver smarter user experiences.
+            </p>
+          </div>
 
-    {/* Title */}
-    <div className="aiwd-section-head">
-      <h2 className="aiwd-section-title">
-        What Is AI Web Application Development?
-      </h2>
+          {/* AI EXPLAINER BLOCK */}
+          <div className="aiwd-ai-explainer">
 
-      <p className="aiwd-section-subtext">
-        AI web applications combine modern web systems with machine learning and LLMs to automate tasks, improve decisions, and deliver smarter user experiences.
-      </p>
-    </div>
+            <div className="aiwd-ai-badge">
+              <span>AI</span>
+            </div>
 
-    {/* AI EXPLAINER BLOCK */}
-    <div className="aiwd-ai-explainer">
+            <div className="aiwd-ai-text">
+              <h3>Smarter Than Traditional Web Apps</h3>
+              <p>
+                Unlike static applications, AI-powered systems learn from user behavior,
+                adapt in real-time, and continuously improve performance without manual updates.
+              </p>
 
-      <div className="aiwd-ai-badge">
-        <span>AI</span>
-      </div>
+              <p>
+                This gives UK & USA businesses a major competitive advantage in automation,
+                customer experience, and data-driven decision making.
+              </p>
+            </div>
 
-      <div className="aiwd-ai-text">
-        <h3>Smarter Than Traditional Web Apps</h3>
-        <p>
-          Unlike static applications, AI-powered systems learn from user behavior,
-          adapt in real-time, and continuously improve performance without manual updates.
-        </p>
+          </div>
 
-        <p>
-          This gives UK & USA businesses a major competitive advantage in automation,
-          customer experience, and data-driven decision making.
-        </p>
-      </div>
+          {/* EXAMPLES GRID */}
+          <div className="aiwd-example-grid">
+            {examples.map((item, index) => (
+              <div key={index} className="aiwd-example-card">
+                <span className="aiwd-check">✔</span>
+                <span>{item}</span>
+              </div>
+            ))}
+          </div>
 
-    </div>
-
-    {/* EXAMPLES GRID */}
-    <div className="aiwd-example-grid">
-      {examples.map((item, index) => (
-        <div key={index} className="aiwd-example-card">
-          <span className="aiwd-check">✔</span>
-          <span>{item}</span>
         </div>
-      ))}
-    </div>
-
-  </div>
-</section>
+      </section>
 
       {/* --- MOVING SERVICES --- */}
       <section className="aiwd-section">
@@ -251,71 +246,72 @@ const AIWebsiteDesign = () => {
         </div>
       </section>
 
-    {/* --- FAQ --- */}
-<section className="aiwd-faq-section">
-  <div className="aiwd-container">
-    <h2 className="aiwd-section-title">Frequently Asked Questions</h2>
-    <div className="aiwd-faq-wrap">
-      {faqs.map((faq, i) => (
-        <div
-          key={i}
-          className={`aiwd-faq-item ${activeFaq === i ? "active" : ""}`}
-          onClick={() =>
-            setActiveFaq(activeFaq === i ? null : i)
-          }
-        >
-          <div className="aiwd-faq-q">
-            <span>{faq.question}</span>
-            {activeFaq === i ? (
-              <Minus size={20} />
-            ) : (
-              <Plus size={20} />
-            )}
-          </div>
-
-          <AnimatePresence>
-            {activeFaq === i && (
-              <motion.div
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: "auto", opacity: 1 }}
-                exit={{ height: 0, opacity: 0 }}
-                className="aiwd-faq-a"
+      {/* --- FAQ --- */}
+      <section className="aiwd-faq-section">
+        <div className="aiwd-container">
+          <h2 className="aiwd-section-title">Frequently Asked Questions</h2>
+          <div className="aiwd-faq-wrap">
+            {faqs.map((faq, i) => (
+              <div
+                key={i}
+                className={`aiwd-faq-item ${activeFaq === i ? "active" : ""}`}
+                onClick={() =>
+                  setActiveFaq(activeFaq === i ? null : i)
+                }
               >
-                <p>{faq.answer}</p>
-              </motion.div>
-            )}
-          </AnimatePresence>
+                <div className="aiwd-faq-q">
+                  <span>{faq.question}</span>
+                  {activeFaq === i ? (
+                    <Minus size={20} />
+                  ) : (
+                    <Plus size={20} />
+                  )}
+                </div>
+
+                <AnimatePresence>
+                  {activeFaq === i && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      className="aiwd-faq-a"
+                    >
+                      <p>{faq.answer}</p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
 
-{/* --- MID CTA --- */}
-<section className="aiwd-cta-section">
-  <div className="aiwd-container">
-    <div className="aiwd-cta-card">
-      <h2 className="aiwd-cta-title">
-        Ready to Build an AI-Powered Website?
-      </h2>
+      {/* --- MID CTA --- */}
+      <section className="aiwd-cta-section">
+        <div className="aiwd-container">
+          <div className="aiwd-cta-card">
+            <h2 className="aiwd-cta-title">
+              Ready to Build an AI-Powered Website?
+            </h2>
 
-      <p className="aiwd-cta-text">
-        Let’s design a high-converting, AI-driven website tailored for your
-        business — optimized for performance, UX, and conversions.
-      </p>
+            <p className="aiwd-cta-text">
+              Let’s design a high-converting, AI-driven website tailored for your
+              business — optimized for performance, UX, and conversions.
+            </p>
 
-      <div className="aiwd-hero-actions">
-        <a href="/contact" className="aiwd-btn-primary">
-          Get Free Consultation
-        </a>
+            <div className="aiwd-hero-actions">
+              <a href="/contact" className="aiwd-btn-primary">
+                Get Free Consultation
+              </a>
 
-        <a href="#work" className="aiwd-btn-secondary">
-          View Our Work →
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+              <a href="#work" className="aiwd-btn-secondary">
+                View Our Work →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       <Footer />
     </div>
   );

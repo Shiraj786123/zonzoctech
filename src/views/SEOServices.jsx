@@ -148,19 +148,35 @@ const SEOServices = () => {
     <>
       <div className="seo-page">
         <Navbar />
-        <Breadcrumb />
 
         {/* HERO */}
         <section className="seo-hero">
           <div className="seo-container">
-            <h1>SEO Agency for Small Business UK — Built to Generate Leads, Not Just Rankings</h1>
+            {/* MOVED BREADCRUMB HERE: Renders inside the dark container above the badge */}
+            <Breadcrumb />
+
+            {/* Top Label / Pill Badge with Safe inline-span wrapper */}
+            <span className="seo-hero-badge-wrapper">
+              <span className="seo-hero-badge-dot"></span>
+              <span className="seo-hero-badge-text">
+                AI Search Engine Optimization Agency
+              </span>
+            </span>
+
+            {/* Split heading text with a highlight span */}
+            <h1 className="seo-hero-title">
+              SEO Agency for Small Business UK <span className="seo_title_sky_blue">— Built to Generate Leads, Not Just Rankings</span>
+            </h1>
+            
             <p className="seo-desc">
               ZonzocTech is an AI SEO agency helping small businesses and startups across the UK and USA grow their organic traffic, attract qualified leads and turn search visibility into real revenue — without the price tag of a big London agency.
             </p>
+            
             <div className="hero-buttons">
               <a href="/contact" className="btn-primary">Get Your Free SEO Audit →</a>
               <a href="#seo-results" className="btn-secondary">See Our Results ↓</a>
             </div>
+            
             <p className="seo-sub" style={{ marginTop: "24px" }}>Trusted by 120+ businesses across UK, USA & Europe</p>
           </div>
         </section>
@@ -176,361 +192,365 @@ const SEOServices = () => {
         </section>
 
         {/* SECTION 1 — WHY CHOOSE ZONZOCTECH */}
-<section className="seo-why">
-  <div className="seo-container">
-    {/* Section Header */}
-    <div className="seo-section-header">
-      <span className="seo-section-badge">
-        Why Choose Us
-      </span>
+        <section className="seo-why">
+          <div className="seo-container">
+            {/* Section Header */}
+            <div className="seo-section-header">
+              <span className="seo-section-badge">
+                Why Choose Us
+              </span>
 
-      <h2>
-        Why Small Businesses in the UK & USA Choose{" "}
-        <span>ZonzocTech</span> for SEO
-      </h2>
+              <h2>
+                Why Small Businesses in the UK & USA Choose{" "}
+                <span>ZonzocTech</span> for SEO
+              </h2>
 
-      <p className="seo-section-subtitle">
-        Most businesses have tried SEO before and seen little to no return.
-        Our approach is different — every SEO strategy is designed to generate
-        qualified leads, measurable growth and long-term revenue.
-      </p>
-    </div>
-
-    {/* Comparison Cards */}
-    <div className="seo-why-grid">
-
-      {/* Typical Agency */}
-      <div className="seo-why-card seo-why-negative">
-        <div className="seo-why-card-header">
-          <div className="seo-why-icon">❌</div>
-          <h3>Typical SEO Agency</h3>
-        </div>
-
-        <ul className="seo-why-list">
-          <li>Chases rankings with no revenue focus</li>
-          <li>Generic monthly reports</li>
-          <li>Same strategy for every client</li>
-          <li>Slow results with no clear timeline</li>
-          <li>No understanding of your business model</li>
-        </ul>
-      </div>
-
-      {/* ZonzocTech */}
-      <div className="seo-why-card seo-why-positive">
-        <div className="seo-why-card-header">
-          <div className="seo-why-icon">🚀</div>
-          <h3>ZonzocTech</h3>
-        </div>
-
-        <ul className="seo-why-list">
-          <li>Focused on leads and revenue from day one</li>
-          <li>Clear and transparent reporting</li>
-          <li>Custom SEO strategy for your business</li>
-          <li>Realistic timelines and measurable KPIs</li>
-          <li>Deep understanding of UK & USA markets</li>
-        </ul>
-      </div>
-
-    </div>
-
-    {/* Bottom Highlight Banner */}
-    <div className="seo-why-banner">
-      <strong>
-        SEO should be an investment that generates measurable business growth —
-        not a monthly expense with unclear results.
-      </strong>
-    </div>
-  </div>
-</section>
-
-        {/* SECTION 2 — SEO SERVICES */}
-<section className="seo-services-modern">
-  <div className="seo-container">
-
-    {/* Header */}
-    <div className="seo-section-header">
-      <span className="seo-section-badge">
-        Our Services
-      </span>
-
-      <h2>
-        SEO Services for <span>UK & USA</span> Businesses
-      </h2>
-
-      <p className="seo-section-subtitle">
-        From technical SEO to content strategy and link building, we deliver
-        complete search optimization services designed to increase rankings,
-        qualified traffic and revenue.
-      </p>
-    </div>
-
-    {/* Services Grid */}
-    <div className="seo-services-grid">
-      {seoServices.map((service, i) => (
-        <div key={i} className="seo-service-card">
-          
-          <div className="seo-service-top">
-            <div className="seo-service-number">
-              {String(i + 1).padStart(2, "0")}
+              <p className="seo-section-subtitle">
+                Most businesses have tried SEO before and seen little to no return.
+                Our approach is different — every SEO strategy is designed to generate
+                qualified leads, measurable growth and long-term revenue.
+              </p>
             </div>
 
-            <div className="seo-service-icon">
-              {[
-                "⚙️",
-                "📝",
-                "📈",
-                "🔗",
-                "📍",
-                "🛒"
-              ][i]}
+            {/* Comparison Cards */}
+            <div className="seo-why-grid">
+
+              {/* Typical Agency */}
+              <div className="seo-why-card seo-why-negative">
+                <div className="seo-why-card-header">
+                  <div className="seo-why-icon">❌</div>
+                  <h3>Typical SEO Agency</h3>
+                </div>
+
+                <ul className="seo-why-list">
+                  <li>Chases rankings with no revenue focus</li>
+                  <li>Generic monthly reports</li>
+                  <li>Same strategy for every client</li>
+                  <li>Slow results with no clear timeline</li>
+                  <li>No understanding of your business model</li>
+                </ul>
+              </div>
+
+              {/* ZonzocTech */}
+              <div className="seo-why-card seo-why-positive">
+                <div className="seo-why-card-header">
+                  <div className="seo-why-icon">🚀</div>
+                  <h3>ZonzocTech</h3>
+                </div>
+
+                <ul className="seo-why-list">
+                  <li>Focused on leads and revenue from day one</li>
+                  <li>Clear and transparent reporting</li>
+                  <li>Custom SEO strategy for your business</li>
+                  <li>Realistic timelines and measurable KPIs</li>
+                  <li>Deep understanding of UK & USA markets</li>
+                </ul>
+              </div>
+
+            </div>
+
+            {/* Bottom Highlight Banner */}
+            <div className="seo-why-banner">
+              <strong>
+                SEO should be an investment that generates measurable business growth —
+                not a monthly expense with unclear results.
+              </strong>
             </div>
           </div>
+        </section>
 
-          <h3>{service.title}</h3>
+        {/* SECTION 2 — SEO SERVICES */}
+        <section className="seo-services-modern">
+          <div className="seo-container">
 
-          <p className="seo-service-desc">
-            {service.description}
-          </p>
+            {/* Header */}
+            <div className="seo-section-header">
+              <span className="seo-section-badge">
+                Our Services
+              </span>
 
-          <ul className="seo-service-list">
-            {service.items.map((item, j) => (
-              <li key={j}>{item}</li>
-            ))}
-          </ul>
-        </div>
-      ))}
-    </div>
+              <h2>
+                SEO Services for <span>UK & USA</span> Businesses
+              </h2>
 
-    {/* Bottom Banner */}
-    <div className="seo-services-banner">
-      <strong>
-        Technical SEO • Content Strategy • Link Building • Local SEO • E-commerce SEO
-      </strong>
-    </div>
+              <p className="seo-section-subtitle">
+                From technical SEO to content strategy and link building, we deliver
+                complete search optimization services designed to increase rankings,
+                qualified traffic and revenue.
+              </p>
+            </div>
 
-  </div>
-</section>
- {/* SECTION 3 — AI SEO ADVANTAGE */}
-<section className="seo-ai-section">
-  <div className="seo-container">
+            {/* Services Grid */}
+            <div className="seo-services-grid">
+              {seoServices.map((service, i) => (
+                <div key={i} className="seo-service-card">
+                  
+                  <div className="seo-service-top">
+                    <div className="seo-service-number">
+                      {String(i + 1).padStart(2, "0")}
+                    </div>
 
-    {/* Header */}
-    <div className="seo-section-header">
-      <span className="seo-section-badge">AI SEO Advantage</span>
-      <h2>
-        Future-Proof Your Visibility with <span>AI SEO</span>
-      </h2>
-      <p className="seo-section-subtitle">
-        We optimize your website for both traditional search engines and AI-powered platforms like ChatGPT, Perplexity, Gemini and Google AI Overviews.
-      </p>
-    </div>
+                    <div className="seo-service-icon">
+                      {[
+                        "⚙️",
+                        "📝",
+                        "📈",
+                        "🔗",
+                        "📍",
+                        "🛒"
+                      ][i]}
+                    </div>
+                  </div>
 
-    {/* Feature 1 */}
-    <div className="seo-ai-row">
-      <div className="seo-ai-text">
-        <div className="seo-ai-tag">GEO</div>
-        <h3>Generative Engine Optimization</h3>
-        <p>We structure your content for AI search engines like ChatGPT and Perplexity.</p>
-      </div>
+                  <h3>{service.title}</h3>
 
-      <div className="seo-ai-visual">
-        <div className="seo-ai-icon-large">🤖</div>
-      </div>
-    </div>
+                  <p className="seo-service-desc">
+                    {service.description}
+                  </p>
 
-    {/* Feature 2 */}
-    <div className="seo-ai-row reverse">
-      <div className="seo-ai-text">
-        <div className="seo-ai-tag">AEO</div>
-        <h3>Answer Engine Optimization</h3>
-        <p>We optimize for featured snippets and direct Google answers.</p>
-      </div>
+                  <ul className="seo-service-list">
+                    {service.items.map((item, j) => (
+                      <li key={j}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
 
-      <div className="seo-ai-visual">
-        <div className="seo-ai-icon-large">💬</div>
-      </div>
-    </div>
+            {/* Bottom Banner */}
+            <div className="seo-services-banner">
+              <strong>
+                Technical SEO • Content Strategy • Link Building • Local SEO • E-commerce SEO
+              </strong>
+            </div>
 
-    {/* Feature 3 */}
-    <div className="seo-ai-row">
-      <div className="seo-ai-text">
-        <div className="seo-ai-tag">AI</div>
-        <h3>AI Keyword Clustering</h3>
-        <p>We group keywords by intent using AI-driven analysis.</p>
-      </div>
+          </div>
+        </section>
+        
+        {/* SECTION 3 — AI SEO ADVANTAGE */}
+        <section className="seo-ai-section">
+          <div className="seo-container">
 
-      <div className="seo-ai-visual">
-        <div className="seo-ai-icon-large">🧠</div>
-      </div>
-    </div>
+            {/* Header */}
+            <div className="seo-section-header">
+              <span className="seo-section-badge">AI SEO Advantage</span>
+              <h2>
+                Future-Proof Your Visibility with <span>AI SEO</span>
+              </h2>
+              <p className="seo-section-subtitle">
+                We optimize your website for both traditional search engines and AI-powered platforms like ChatGPT, Perplexity, Gemini and Google AI Overviews.
+              </p>
+            </div>
 
-    {/* Feature 4 */}
-    <div className="seo-ai-row reverse">
-      <div className="seo-ai-text">
-        <div className="seo-ai-tag">INTENT</div>
-        <h3>Search Intent Prediction</h3>
-        <p>We map user intent to improve conversions and ranking accuracy.</p>
-      </div>
+            {/* Feature 1 */}
+            <div className="seo-ai-row">
+              <div className="seo-ai-text">
+                <div className="seo-ai-tag">GEO</div>
+                <h3>Generative Engine Optimization</h3>
+                <p>We structure your content for AI search engines like ChatGPT and Perplexity.</p>
+              </div>
 
-      <div className="seo-ai-visual">
-        <div className="seo-ai-icon-large">🎯</div>
-      </div>
-    </div>
+              <div className="seo-ai-visual">
+                <div className="seo-ai-icon-large">🤖</div>
+              </div>
+            </div>
 
-    {/* Footer */}
-    <div className="seo-ai-footer">
-      Optimized for Google • ChatGPT • Perplexity • Gemini • AI Overviews
-    </div>
+            {/* Feature 2 */}
+            <div className="seo-ai-row reverse">
+              <div className="seo-ai-text">
+                <div className="seo-ai-tag">AEO</div>
+                <h3>Answer Engine Optimization</h3>
+                <p>We optimize for featured snippets and direct Google answers.</p>
+              </div>
 
-  </div>
-</section>
+              <div className="seo-ai-visual">
+                <div className="seo-ai-icon-large">💬</div>
+              </div>
+            </div>
+
+            {/* Feature 3 */}
+            <div className="seo-ai-row">
+              <div className="seo-ai-text">
+                <div className="seo-ai-tag">AI</div>
+                <h3>AI Keyword Clustering</h3>
+                <p>We group keywords by intent using AI-driven analysis.</p>
+              </div>
+
+              <div className="seo-ai-visual">
+                <div className="seo-ai-icon-large">🧠</div>
+              </div>
+            </div>
+
+            {/* Feature 4 */}
+            <div className="seo-ai-row reverse">
+              <div className="seo-ai-text">
+                <div className="seo-ai-tag">INTENT</div>
+                <h3>Search Intent Prediction</h3>
+                <p>We map user intent to improve conversions and ranking accuracy.</p>
+              </div>
+
+              <div className="seo-ai-visual">
+                <div className="seo-ai-icon-large">🎯</div>
+              </div>
+            </div>
+
+            {/* Footer */}
+            <div className="seo-ai-footer">
+              Optimized for Google • ChatGPT • Perplexity • Gemini • AI Overviews
+            </div>
+
+          </div>
+        </section>
+        
         {/* SECTION 4 — PROCESS */}
-   {/* SECTION 4 — SEO PROCESS LIGHT UI */}
-<section className="seo-process-light">
-  <div className="seo-container">
+        <section className="seo-process-light">
+          <div className="seo-container">
 
-    <div className="seo-section-header">
-      <span className="seo-section-badge">Our Process</span>
-      <h2>
-        SEO System Built for <span>Predictable Growth</span>
-      </h2>
-      <p className="seo-section-subtitle">
-        A structured workflow that turns SEO into a clear, measurable system.
-      </p>
-    </div>
+            <div className="seo-section-header">
+              <span className="seo-section-badge">Our Process</span>
+              <h2>
+                SEO System Built for <span>Predictable Growth</span>
+              </h2>
+              <p className="seo-section-subtitle">
+                A structured workflow that turns SEO into a clear, measurable system.
+              </p>
+            </div>
 
-    <div className="seo-process-light-grid">
+            <div className="seo-process-light-grid">
 
-      <div className="seo-process-light-item bg-blue">
-        <div className="seo-process-icon">🔍</div>
-        <div>
-          <h3>Audit & Analysis</h3>
-          <p>We analyze technical SEO, competitors, and keyword opportunities.</p>
-        </div>
-      </div>
+              <div className="seo-process-light-item bg-blue">
+                <div className="seo-process-icon">🔍</div>
+                <div>
+                  <h3>Audit & Analysis</h3>
+                  <p>We analyze technical SEO, competitors, and keyword opportunities.</p>
+                </div>
+              </div>
 
-      <div className="seo-process-light-item bg-teal">
-        <div className="seo-process-icon">🧭</div>
-        <div>
-          <h3>Strategy Planning</h3>
-          <p>We create a data-driven roadmap aligned with your business goals.</p>
-        </div>
-      </div>
+              <div className="seo-process-light-item bg-teal">
+                <div className="seo-process-icon">🧭</div>
+                <div>
+                  <h3>Strategy Planning</h3>
+                  <p>We create a data-driven roadmap aligned with your business goals.</p>
+                </div>
+              </div>
 
-      <div className="seo-process-light-item bg-amber">
-        <div className="seo-process-icon">⚙️</div>
-        <div>
-          <h3>Technical SEO Fix</h3>
-          <p>We fix speed, crawlability, indexing, and site structure issues.</p>
-        </div>
-      </div>
+              <div className="seo-process-light-item bg-amber">
+                <div className="seo-process-icon">⚙️</div>
+                <div>
+                  <h3>Technical SEO Fix</h3>
+                  <p>We fix speed, crawlability, indexing, and site structure issues.</p>
+                </div>
+              </div>
 
-      <div className="seo-process-light-item bg-green">
-        <div className="seo-process-icon">🧠</div>
-        <div>
-          <h3>Content & Authority</h3>
-          <p>We build topic clusters, content, and backlinks for authority growth.</p>
-        </div>
-      </div>
+              <div className="seo-process-light-item bg-green">
+                <div className="seo-process-icon">🧠</div>
+                <div>
+                  <h3>Content & Authority</h3>
+                  <p>We build topic clusters, content, and backlinks for authority growth.</p>
+                </div>
+              </div>
 
-      <div className="seo-process-light-item bg-slate">
-        <div className="seo-process-icon">📈</div>
-        <div>
-          <h3>Tracking & Scaling</h3>
-          <p>We monitor performance and scale what drives real conversions.</p>
-        </div>
-      </div>
+              <div className="seo-process-light-item bg-slate">
+                <div className="seo-process-icon">📈</div>
+                <div>
+                  <h3>Tracking & Scaling</h3>
+                  <p>We monitor performance and scale what drives real conversions.</p>
+                </div>
+              </div>
 
-    </div>
+            </div>
 
-  </div>
-</section>
+          </div>
+        </section>
+        
         {/* SECTION 5 — WHO THIS IS FOR */}
-<section className="seo-audience">
-  <div className="seo-container">
+        <section className="seo-audience">
+          <div className="seo-container">
 
-    <div className="seo-section-header">
-      <span className="seo-section-badge">Who It's For</span>
-      <h2>
-        SEO Services Built for <span>Real Businesses</span>
-      </h2>
-      <p className="seo-section-subtitle">
-        We don’t do one-size-fits-all SEO. Every strategy is built based on your business type and goals.
-      </p>
-    </div>
+            <div className="seo-section-header">
+              <span className="seo-section-badge">Who It's For</span>
+              <h2>
+                SEO Services Built for <span>Real Businesses</span>
+              </h2>
+              <p className="seo-section-subtitle">
+                We don’t do one-size-fits-all SEO. Every strategy is built based on your business type and goals.
+              </p>
+            </div>
 
-    <div className="seo-audience-grid">
+            <div className="seo-audience-grid">
 
-      <div className="seo-audience-card bg-blue">
-        <div className="seo-audience-icon">🏢</div>
-        <h3>Small Businesses</h3>
-        <p>Compete with larger brands using smart, targeted SEO strategies.</p>
-      </div>
+              <div className="seo-audience-card bg-blue">
+                <div className="seo-audience-icon">🏢</div>
+                <h3>Small Businesses</h3>
+                <p>Compete with larger brands using smart, targeted SEO strategies.</p>
+              </div>
 
-      <div className="seo-audience-card bg-teal">
-        <div className="seo-audience-icon">🚀</div>
-        <h3>Startups</h3>
-        <p>Fast SEO growth strategies designed to build visibility quickly.</p>
-      </div>
+              <div className="seo-audience-card bg-teal">
+                <div className="seo-audience-icon">🚀</div>
+                <h3>Startups</h3>
+                <p>Fast SEO growth strategies designed to build visibility quickly.</p>
+              </div>
 
-      <div className="seo-audience-card bg-amber">
-        <div className="seo-audience-icon">🛒</div>
-        <h3>E-commerce Brands</h3>
-        <p>Drive organic product traffic and reduce dependency on ads.</p>
-      </div>
+              <div className="seo-audience-card bg-amber">
+                <div className="seo-audience-icon">🛒</div>
+                <h3>E-commerce Brands</h3>
+                <p>Drive organic product traffic and reduce dependency on ads.</p>
+              </div>
 
-      <div className="seo-audience-card bg-green">
-        <div className="seo-audience-icon">📍</div>
-        <h3>Service Businesses</h3>
-        <p>Generate local and national leads consistently through Google.</p>
-      </div>
+              <div className="seo-audience-card bg-green">
+                <div className="seo-audience-icon">📍</div>
+                <h3>Service Businesses</h3>
+                <p>Generate local and national leads consistently through Google.</p>
+              </div>
 
-      <div className="seo-audience-card bg-slate">
-        <div className="seo-audience-icon">📊</div>
-        <h3>Growth-Focused Companies</h3>
-        <p>Businesses that want measurable ROI from SEO investment.</p>
-      </div>
+              <div className="seo-audience-card bg-slate">
+                <div className="seo-audience-icon">📊</div>
+                <h3>Growth-Focused Companies</h3>
+                <p>Businesses that want measurable ROI from SEO investment.</p>
+              </div>
 
-      <div className="seo-audience-card bg-blue">
-        <div className="seo-audience-icon">⚡</div>
-        <h3>Rebuilding SEO Clients</h3>
-        <p>For businesses recovering from poor SEO or previous agencies.</p>
-      </div>
+              <div className="seo-audience-card bg-blue">
+                <div className="seo-audience-icon">⚡</div>
+                <h3>Rebuilding SEO Clients</h3>
+                <p>For businesses recovering from poor SEO or previous agencies.</p>
+              </div>
 
-    </div>
+            </div>
 
-  </div>
-</section>
-     {/* SECTION 6 — FAQ */}
-<section className="seo-faq">
-  <div className="seo-container">
+          </div>
+        </section>
+        
+        {/* SECTION 6 — FAQ */}
+        <section className="seo-faq">
+          <div className="seo-container">
 
-    <div className="seo-section-header">
-      <span className="seo-section-badge">FAQ</span>
-      <h2>
-        Frequently Asked <span>Questions</span>
-      </h2>
-      <p className="seo-section-subtitle">
-        Everything you need to know about our SEO services.
-      </p>
-    </div>
+            <div className="seo-section-header">
+              <span className="seo-section-badge">FAQ</span>
+              <h2>
+                Frequently Asked <span>Questions</span>
+              </h2>
+              <p className="seo-section-subtitle">
+                Everything you need to know about our SEO services.
+              </p>
+            </div>
 
-    <div className="seo-faq-center">
+            <div className="seo-faq-center">
 
-      {faqs.map((faq, i) => (
-        <details key={i} className="seo-faq-box">
-          <summary>
-            {faq.q}
-            <span className="faq-icon">+</span>
-          </summary>
-          <p>{faq.a}</p>
-        </details>
-      ))}
+              {faqs.map((faq, i) => (
+                <details key={i} className="seo-faq-box">
+                  <summary>
+                    {faq.q}
+                    <span className="faq-icon">+</span>
+                  </summary>
+                  <p>{faq.a}</p>
+                </details>
+              ))}
 
-    </div>
+            </div>
 
-  </div>
-</section>
+          </div>
+        </section>
+        
         {/* CTA */}
         <section className="cta-section">
           <div className="seo-container">

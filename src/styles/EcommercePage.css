@@ -2394,3 +2394,408 @@
 .cta-section {
   margin-top: 0 !important;
 }
+
+
+
+
+
+
+
+
+
+/* 1. Hero Container & Gradient Background */
+.ecd__hero {
+  position: relative;
+  /* Smooth, dark glowing navy blue gradient */
+  background: radial-gradient(circle at 50% 90%, #003d73 0%, #001b3a 60%, #000f21 100%);
+  color: #ffffff;
+  padding: 100px 24px 80px 24px;
+  text-align: center;
+  overflow: hidden;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* 2. Disabling the Grid/Diamond Pattern */
+.ecd__hero_pattern {
+  display: none; /* Hides the repeating checkered background layout */
+}
+
+.ecd__hero_container {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* 3. Heading (Mixed White & Sky Blue Colors) */
+.ecd__hero_title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #ffffff; /* Default is white */
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+
+.ecd__hero_title_highlight {
+  color: #38bdf8; /* Highlighting the end text in sky blue */
+}
+
+/* Hero Subtext */
+.ecd__hero_text {
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.85); /* Slightly muted white for clean design */
+  max-width: 780px;
+  margin: 0 auto 36px auto;
+}
+
+/* 4. Hero Buttons Layout */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+/* Primary Button (Solid Sky Blue with Dark Navy text) */
+.hero-buttons .btn-primary {
+  display: inline-block;
+  background-color: #38bdf8;
+  color: #001f3f !important; /* Force deep dark blue color for text legibility */
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.hero-buttons .btn-primary:hover {
+  background-color: #25aff2;
+}
+
+/* Secondary Button (Transparent with subtle Sky Blue Border) */
+.hero-buttons .btn-secondary {
+  display: inline-block;
+  background-color: transparent;
+  color: #ffffff !important;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 14px 28px;
+  border: 1.5px solid rgba(73, 188, 244, 0.5); /* Semi-transparent blue border */
+  border-radius: 10px;
+  text-decoration: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.hero-buttons .btn-secondary:hover {
+  border-color: #38bdf8;
+  background-color: rgba(56, 189, 248, 0.08); /* Soft blue highlight hover fill */
+}
+
+/* Trust Subtext */
+.ecd__hero_trust {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.5); /* Soft gray-blue */
+  margin: 0;
+}
+
+/* 5. Stats Bar Styling */
+.stats-bar {
+  background-color: #001227; /* Muted deep blue background for contrast */
+  color: #ffffff;
+  padding: 30px 24px;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #38bdf8; /* Numbers highlighted in sky blue */
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 4px;
+}
+
+
+
+
+
+/* Stats Bar Container - Now White */
+.stats-bar {
+  background-color: #ffffff; /* White background */
+  padding: 40px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  border-top: 1px solid #e5e7eb; /* Subtle top border */
+}
+
+/* Individual Stat Item */
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 60px;
+  text-align: center;
+  min-width: 180px;
+}
+
+/* Vertical Divider Lines (Darker for white background) */
+.stat-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 10%;
+  height: 80%;
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.12); /* Light gray line instead of white */
+}
+
+/* Stat Numbers (Unchanged Blue Color) */
+.stat-number {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #1296ec; /* Keeps the vibrant blue color */
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+/* Stat Labels (Darkened for readability on white) */
+.stat-label {
+  font-size: 0.875rem;
+  color: #4b5563; /* Dark gray text */
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+/* Responsive adjustment for mobile screens */
+@media (max-width: 768px) {
+  .stats-bar {
+    flex-direction: column;
+    gap: 32px;
+    padding: 40px 16px;
+  }
+  .stat-item {
+    padding: 0;
+  }
+  .stat-item:not(:last-child)::after {
+    display: none;
+  }
+}
+
+
+
+
+
+
+/* ================= HERO WRAPPER ================= */
+
+section.ecd__hero {
+  position: relative !important;
+  /* Glowing deep navy blue background */
+  background: radial-gradient(circle at 50% 90%, #003d73 0%, #001b3a 60%, #000f21 100%) !important;
+  color: #ffffff !important;
+  padding: 95px 24px 85px 24px !important; /* Balanced standard vertical padding */
+  text-align: center !important;
+  overflow: hidden !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  width: 100% !important;
+  display: block !important;
+}
+
+/* Disables checkered pattern overlay background */
+.ecd__hero_pattern {
+  display: none !important;
+}
+
+/* Scopes container styling to the hero to prevent other sections from shrinking */
+section.ecd__hero .ecd__hero_container {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  position: relative !important;
+  z-index: 1 !important;
+  display: block !important;
+}
+
+/* ================= TYPOGRAPHY ================= */
+
+/* Massive, tight-lettering header styling */
+section.ecd__hero .ecd__hero_title {
+  font-size: 64px !important; /* Solid desktop heading size */
+  font-weight: 800 !important; /* Extra bold */
+  line-height: 1.15 !important; /* Tight line height */
+  color: #ffffff !important;
+  margin-bottom: 28px !important;
+  letter-spacing: -0.03em !important; /* Tight letter spacing */
+  margin-top: 0 !important;
+}
+
+/* Sky-Blue Accent Text */
+section.ecd__hero .ecd__hero_title_highlight {
+  color: #38bdf8 !important; /* Sky Blue accent */
+  background-color: transparent !important; /* Overrides global highlight classes */
+  display: inline !important;
+}
+
+/* Supporting Hero Text */
+section.ecd__hero .ecd__hero_text {
+  font-size: 1.15rem !important;
+  line-height: 1.65 !important;
+  color: rgba(255, 255, 255, 0.85) !important; /* Premium soft white */
+  max-width: 800px !important;
+  margin: 0 auto 36px auto !important;
+  display: block !important;
+}
+
+/* ================= CTA BUTTONS ================= */
+
+section.ecd__hero .hero-buttons {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 16px !important;
+  margin-bottom: 32px !important;
+  flex-wrap: wrap !important;
+}
+
+/* Primary Button (Solid Sky Blue with Dark Navy text) */
+section.ecd__hero .btn-primary {
+  display: inline-block !important;
+  background-color: #38bdf8 !important;
+  color: #001f3f !important; /* Force high-contrast text color */
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  padding: 14px 28px !important;
+  border-radius: 10px !important;
+  text-decoration: none !important;
+  transition: background-color 0.2s ease !important;
+}
+
+section.ecd__hero .btn-primary:hover {
+  background-color: #25aff2 !important;
+}
+
+/* Secondary Button (Outlined) */
+section.ecd__hero .btn-secondary {
+  display: inline-block !important;
+  background-color: transparent !important;
+  color: #ffffff !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  padding: 14px 28px !important;
+  border: 1.5px solid rgba(73, 188, 244, 0.5) !important; /* Semi-transparent blue border */
+  border-radius: 10px !important;
+  text-decoration: none !important;
+  transition: border-color 0.2s ease, background-color 0.2s ease !important;
+}
+
+section.ecd__hero .btn-secondary:hover {
+  border-color: #38bdf8 !important;
+  background-color: rgba(56, 189, 248, 0.08) !important;
+}
+
+/* Trust text below buttons */
+section.ecd__hero .ecd__hero_trust {
+  font-size: 0.875rem !important;
+  color: rgba(255, 255, 255, 0.5) !important; /* Muted gray-blue */
+  margin: 0 !important;
+  display: block !important;
+}
+
+/* ================= MEDIA QUERIES ===========*/
+
+
+@media (max-width: 1024px) {
+  section.ecd__hero .ecd__hero_title {
+    font-size: 48px !important; /* Balanced tablet size */
+  }
+}
+
+@media (max-width: 640px) {
+  section.ecd__hero .ecd__hero_title {
+    font-size: 36px !important; /* Legible mobile size */
+    line-height: 1.2 !important;
+  }
+}
+
+
+
+
+
+
+
+/* ================= PILL BADGE LABEL ================= */
+
+section.ecd__hero .ecd__hero_badge_wrapper {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important; /* Space between dot and text */
+  padding: 6px 14px !important;
+  background-color: rgba(56, 189, 248, 0.08) !important; /* Soft sky-blue background tint */
+  border: 1px solid rgba(56, 189, 248, 0.25) !important; /* Soft border edge */
+  border-radius: 9999px !important; /* Pill shape */
+  margin-bottom: 28px !important;
+}
+
+section.ecd__hero .ecd__hero_badge_dot {
+  width: 8px !important;
+  height: 8px !important;
+  background-color: #38bdf8 !important; /* Active sky-blue color */
+  border-radius: 50% !important;
+  display: inline-block !important;
+  position: relative !important;
+}
+
+/* Glowing outer pulse ring */
+section.ecd__hero .ecd__hero_badge_dot::after {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 50% !important;
+  background-color: #38bdf8 !important;
+  animation: ecdBadgePulse 2s infinite ease-in-out !important;
+}
+
+section.ecd__hero .ecd__hero_badge_text {
+  color: #38bdf8 !important;
+  font-size: 0.825rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  line-height: 1 !important;
+}
+
+/* Smooth pulse keyframes */
+@keyframes ecdBadgePulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}

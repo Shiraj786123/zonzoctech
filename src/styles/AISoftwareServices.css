@@ -1896,3 +1896,393 @@
 .aiss__hero_title_accent {
   color: #38bdf8;
 }
+
+
+
+
+/* ================= HERO STYLES ================= */
+
+/* 1. Hero Container & Gradient Background */
+.aiss__hero {
+  position: relative;
+  background: radial-gradient(circle at 50% 90%, #003d73 0%, #001b3a 60%, #000f21 100%);
+  color: #ffffff;
+  padding: 100px 24px 80px 24px;
+  text-align: center;
+  overflow: hidden;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.aiss__hero_gradient {
+  display: none; /* Hides any conflicting default pattern container */
+}
+
+.aiss__hero_container {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Pill Shape Badge at the top */
+.aiss__hero_badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background-color: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: #38bdf8;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+/* 2. Heading (White & Accent Text Color Configured Safely) */
+.aiss__hero_title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #ffffff; /* Base header is white */
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+
+.aiss__hero_title_accent {
+  color: #38bdf8 !important; /* Sky Blue */
+  background: transparent !important; /* Overrides any framework-highlight rules */
+  background-color: transparent !important;
+  display: inline !important;
+}
+
+/* Supporting Paragraph Description */
+.aiss__hero_text {
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.85); /* Premium soft white */
+  max-width: 780px;
+  margin: 0 auto 36px auto;
+}
+
+/* 3. Hero Button Configuration */
+.aiss__hero .hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+/* Primary Button (Solid Sky Blue with Dark Navy text) */
+.aiss__hero .hero-buttons .btn-primary {
+  display: inline-block;
+  background-color: #38bdf8;
+  color: #001f3f !important; /* High-contrast dark text */
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.aiss__hero .hero-buttons .btn-primary:hover {
+  background-color: #25aff2;
+}
+
+/* Secondary Button (Transparent with a subtle Sky Blue Border) */
+.aiss__hero .hero-buttons .btn-secondary {
+  display: inline-block;
+  background-color: transparent;
+  color: #ffffff !important;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 14px 28px;
+  border: 1.5px solid rgba(73, 188, 244, 0.5);
+  border-radius: 10px;
+  text-decoration: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.aiss__hero .hero-buttons .btn-secondary:hover {
+  border-color: #38bdf8;
+  background-color: rgba(56, 189, 248, 0.08);
+}
+
+/* Trust Subtext */
+.aiss__hero_trust {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+
+/* ================= STATS BAR STYLES ================= */
+
+/* White Background Container */
+.stats-bar {
+  background-color: #ffffff; 
+  padding: 40px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* Stat Wrapper */
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 60px;
+  text-align: center;
+  min-width: 180px;
+}
+
+/* Vertical Separators between stats */
+.stat-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 10%;
+  height: 80%;
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.12); /* Clean light gray line */
+}
+
+/* Stat Numbers (Vibrant Blue color) */
+.stat-number {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #1296ec; /* Keeps original blue color */
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+/* Stat Labels (Legible Dark Gray on White) */
+.stat-label {
+  font-size: 0.875rem;
+  color: #4b5563; 
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+/* Responsive adjustment for mobile screens */
+@media (max-width: 768px) {
+  .stats-bar {
+    flex-direction: column;
+    gap: 32px;
+    padding: 40px 16px;
+  }
+  .stat-item {
+    padding: 0;
+  }
+  .stat-item:not(:last-child)::after {
+    display: none;
+  }
+}
+
+
+
+/* ================= HERO CONTAINER ================= */
+
+.aiss__hero {
+  position: relative;
+  /* Glowing deep navy blue background */
+  background: radial-gradient(circle at 50% 90%, #003d73 0%, #001b3a 60%, #000f21 100%);
+  color: #ffffff;
+  padding: 85px 24px 75px 24px; /* Balanced vertical breathing room */
+  text-align: center;
+  overflow: hidden;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.aiss__hero_gradient {
+  display: none; /* Disables any background conflicting layers */
+}
+
+.aiss__hero_container {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ================= TYPOGRAPHY & HEADER ================= */
+
+/* Badge at the top */
+.aiss__hero_badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background-color: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  color: #38bdf8;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 28px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Massive, tight-spaced typography */
+.aiss__hero_title {
+  font-size: clamp(2.5rem, 5.2vw, 4.25rem); /* Scalable huge size */
+  font-weight: 800; /* Extra bold */
+  line-height: 1.15; /* Tight line height */
+  color: #ffffff;
+  margin-bottom: 28px;
+  letter-spacing: -0.03em; /* Tight horizontal tracking */
+}
+
+/* Sky-Blue Accent Text */
+.aiss__hero_title_accent {
+  color: #38bdf8 !important; /* Sky Blue accent color */
+  background-color: transparent !important;
+  display: inline !important;
+}
+
+/* Subtext Description */
+.aiss__hero_text {
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.85); /* Soft, readable white text */
+  max-width: 800px;
+  margin: 0 auto 36px auto;
+}
+
+/* ================= CTA BUTTONS ================= */
+
+.aiss__hero .hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+/* Primary Button (Solid Sky Blue with Dark Navy text) */
+.aiss__hero .hero-buttons .btn-primary {
+  display: inline-block;
+  background-color: #38bdf8;
+  color: #001f3f !important; /* Force high-contrast text color */
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.aiss__hero .hero-buttons .btn-primary:hover {
+  background-color: #25aff2;
+}
+
+/* Secondary Button (Outlined) */
+.aiss__hero .hero-buttons .btn-secondary {
+  display: inline-block;
+  background-color: transparent;
+  color: #ffffff !important;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 14px 28px;
+  border: 1.5px solid rgba(73, 188, 244, 0.5); /* Semi-transparent blue border */
+  border-radius: 10px;
+  text-decoration: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.aiss__hero .hero-buttons .btn-secondary:hover {
+  border-color: #38bdf8;
+  background-color: rgba(56, 189, 248, 0.08);
+}
+
+/* Trust Text below buttons */
+.aiss__hero_trust {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.5); /* Muted gray-blue */
+  margin: 0;
+}
+
+
+/* ================= STATS BAR CARD ================= */
+
+/* Clean white floating card layout */
+section.stats-bar {
+  background-color: #ffffff !important;
+  border: 1px solid #f1f5f9 !important; /* Soft border edge */
+  border-radius: 24px !important; /* Highly rounded card corners */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.04) !important; /* Soft shadow depth */
+  
+  /* Stretches card horizontally */
+  width: calc(100% - 48px) !important;
+  max-width: 1200px !important;
+  margin: 40px auto !important;
+  
+  /* Thinner vertical thickness */
+  padding: 24px 16px !important;
+  
+  display: flex !important;
+  justify-content: space-around !important;
+  align-items: center !important;
+  flex-wrap: nowrap !important; /* Prevents text items from folding */
+}
+
+/* Individual Stat block */
+section.stats-bar .stat-item {
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative;
+  padding: 4px 12px !important;
+  text-align: center !important;
+}
+
+/* Slim gray vertical separators */
+section.stats-bar .stat-item:not(:last-child)::after {
+  content: "" !important;
+  position: absolute !important;
+  right: 0 !important;
+  top: 15% !important;
+  height: 70% !important;
+  width: 1px !important;
+  background-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Saturated Blue Numbers */
+section.stats-bar .stat-number {
+  font-size: 2.25rem !important;
+  font-weight: 800 !important;
+  color: #004b93 !important; /* Saturated deep blue */
+  line-height: 1.1 !important;
+  letter-spacing: -0.01em !important;
+}
+
+/* Uppercase Slate Gray Labels */
+section.stats-bar .stat-label {
+  font-size: 0.75rem !important;
+  color: #64748b !important; /* Slate gray */
+  margin-top: 6px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* Mobile responsive collapse */
+@media (max-width: 900px) {
+  section.stats-bar {
+    flex-direction: column !important;
+    gap: 24px !important;
+    padding: 30px 16px !important;
+    width: calc(100% - 32px) !important;
+    max-width: 500px !important;
+  }
+  section.stats-bar .stat-item:not(:last-child)::after {
+    display: none !important;
+  }
+}

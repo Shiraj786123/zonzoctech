@@ -51,55 +51,67 @@ const AIWebAppDev = () => {
   return (
     <div className="aiwa__wrapper">
       <Navbar />
-      <Breadcrumb />
 
-     {/* 1. HERO */}
-<section className="aiwa__bar_hero">
-  <div className="aiwa__container">
-    <h1 className="aiwa__heading">
-      AI Web Application Development for{" "}
-      <span className="text_light_blue">UK & USA Businesses</span>
-    </h1>
+      {/* 1. HERO */}
+      <section className="aiwa__hero_section">
+        <div className="aiwa__container">
+          {/* MOVED BREADCRUMB HERE: Renders inside the dark container above the title */}
+          <Breadcrumb />
 
-    <p className="aiwa__hero_text_white">
-      ZonzocTech builds custom AI-powered web applications. From intelligent
-      dashboards to GPT-powered tools — we scale your business growth.
-    </p>
+          {/* Top Label / Pill Badge with Safe inline-span wrapper */}
+          <span className="aiwa__hero_badge_wrapper">
+            <span className="aiwa__hero_badge_dot"></span>
+            <span className="aiwa__hero_badge_text">
+              AI Web Application Development Agency
+            </span>
+          </span>
 
-    {/* CTA BUTTONS */}
-    <div className="aiwa__hero_actions">
-      <a href="/contact" className="aiwa__btn_primary">
-        Get Free Consultation
-      </a>
-      <a href="/#portfolio" className="aiwa__btn_secondary">
-        View Portfolio→
-      </a>
-    </div>
+          {/* Heading */}
+          <h1 className="aiwa__heading">
+            AI Web Application Development for{" "}
+            <span className="text_light_blue">UK & USA Businesses</span>
+          </h1>
 
-    {/* TRUST TEXT */}
-    <p className="aiwa__hero_trust_text">
-      Trusted by 120+ businesses across the UK, USA & Europe
-    </p>
-  </div>
-</section>
+          <p className="aiwa__hero_text_white">
+            ZonzocTech builds custom AI-powered web applications. From intelligent
+            dashboards to GPT-powered tools — we scale your business growth.
+          </p>
 
-{/* 2. STATS BAR */}
-<section className="aiwa__stats_section">
-  <div className="aiwa__container">
-    <div className="aiwa__stats_border_box">
-      {stats.map((s, i) => (
-        <div key={i} className="stat_item">
-          <span className="stat_num">{s.number}</span>
-          <span className="stat_lbl">{s.label}</span>
+          {/* CTA BUTTONS */}
+          <div className="aiwa__hero_actions">
+            <a href="/contact" className="aiwa__btn_primary">
+              Get Free Consultation
+            </a>
+            <a href="/#portfolio" className="aiwa__btn_secondary">
+              View Portfolio →
+            </a>
+          </div>
+
+          {/* TRUST TEXT */}
+          <p className="aiwa__hero_trust_text">
+            Trusted by 120+ businesses across the UK, USA & Europe
+          </p>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
+
+      {/* 2. STATS BAR */}
+      <section className="aiwa__stats_section">
+        <div className="aiwa__container">
+          <div className="aiwa__stats_border_box">
+            {stats.map((s, i) => (
+              <div key={i} className="stat_item">
+                <span className="stat_num">{s.number}</span>
+                <span className="stat_lbl">{s.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* 3. INTRODUCTION */}
       <section className="aiwa__section white_bar">
         <div className="aiwa__container">
+          {/* Unchanged Intro Card (Yellow Marked Area) */}
           <h2 className="aiwa__title_dark">What Is AI Web Application Development?</h2>
           <div className="aiwa__bar_row">
             <div className="aiwa__bar_num"><h2>AI</h2></div>
@@ -107,11 +119,31 @@ const AIWebAppDev = () => {
               <p>AI development uses artificial intelligence to automate tasks, analyze data, and personalize experiences without manual intervention. Unlike standard apps, these learn from data and improve over time, providing a major competitive edge for UK and USA businesses.</p>
             </div>
           </div>
+
+          {/* Modern Interactive Feature Cards */}
           <h3 className="aiwa__grid_title">Examples of AI Web Applications We Build:</h3>
+          
           <div className="aiwa__grid_examples_fixed">
-            {[ "Intelligent dashboards & reporting", "AI-powered SaaS platforms", "GPT powered customer tools", "Automated lead qualification", "AI recommendation engines", "Internal workflow automation", "Predictive analytics platforms", "AI chatbots & virtual assistants" ].map((item, index) => (
-              <div key={index} className="aiwa__example_bar_card hover_lift_bar">
-                <span className="check_icon_purple">✔️</span> {item}
+            {[ 
+              "Intelligent dashboards & reporting", 
+              "AI-powered SaaS platforms", 
+              "GPT powered customer tools", 
+              "Automated lead qualification", 
+              "AI recommendation engines", 
+              "Internal workflow automation", 
+              "Predictive analytics platforms", 
+              "AI chatbots & virtual assistants" 
+            ].map((item, index) => (
+              <div key={index} className="aiwa__example_stripe_card">
+                <span className="aiwa__stripe_text">{item}</span>
+                
+                {/* Micro-arrow icon that animates on card hover */}
+                <span className="aiwa__stripe_arrow">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </span>
               </div>
             ))}
           </div>
@@ -125,8 +157,12 @@ const AIWebAppDev = () => {
           <div className="aiwa__grid_3">
             {services.map((s, i) => (
               <div key={i} className="aiwa__service_box hover_lift">
-                <div className="aiwa__box_icon">{s.i}</div>
-                <h4 className="aiwa__box_title_left">{s.t}</h4>
+                {/* Flex Row Header: Groups Icon & Title Side-by-Side */}
+                <div className="aiwa__service_header">
+                  <div className="aiwa__box_icon">{s.i}</div>
+                  <h4 className="aiwa__box_title_left">{s.t}</h4>
+                </div>
+                
                 <ul className="aiwa__card_bullets_left">
                   {s.points.map((p, idx) => <li key={idx}><span>›</span> {p}</li>)}
                 </ul>
@@ -135,10 +171,9 @@ const AIWebAppDev = () => {
           </div>
         </div>
       </section>
-
+  
       {/* 5. PROCESS SECTION */}
-{/* 5. PROCESS SECTION */}
-<section className="aiwa__section process-section">
+     <section className="aiwa__section process-section">
   <div className="aiwa__container">
     {/* Section Label */}
     <div className="process-label">Our Process</div>
@@ -157,47 +192,82 @@ const AIWebAppDev = () => {
     <div className="steps-grid">
       {[
         {
-          number: "1",
-          icon: "🔍",
+          number: "01",
           title: "Discovery",
+          theme: "blue",
           description:
-            "We learn your goals. We review workflows. We find AI opportunities. We define a roadmap."
+            "We study your business goals, current systems, and challenges to identify the optimal opportunities for high-impact automation.",
+          icon: (
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          )
         },
         {
-          number: "2",
-          icon: "📐",
+          number: "02",
           title: "Planning",
+          theme: "purple",
           description:
-            "We design the architecture. We map features. We choose AI tools. We prepare specifications."
+            "We orchestrate the complete project roadmap, technical architecture, and user blueprints to guarantee absolute clarity before production.",
+          icon: (
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+          )
         },
         {
-          number: "3",
-          icon: "💻",
+          number: "03",
           title: "Development",
+          theme: "emerald",
           description:
-            "We build the application. We integrate AI features. We gather feedback. We refine each sprint."
+            "Our engineering squad builds your architecture in rapid, agile sprints with transparent milestone reviews and automated quality assurance metrics.",
+          icon: (
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+          )
         },
         {
-          number: "4",
-          icon: "🧪",
-          title: "Validation",
-          description:
-            "We test all functions. We verify performance. We check AI accuracy. We fix all issues."
-        },
-        {
-          number: "5",
-          icon: "🚀",
+          number: "04",
           title: "Launch",
+          theme: "amber",
           description:
-            "We deploy securely. We monitor usage. We provide support. We deliver enhancements."
+            "We run deep stress tests, multi-layered security audits, and full cross-platform responsiveness benchmarks before deploying into high-availability production environments.",
+          icon: (
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+          )
+        },
+        {
+          number: "05",
+          title: "Growth",
+          theme: "rose",
+          description:
+            "We stay connected with continuous platform optimization, system upgrades, and strategic monitoring metrics to adapt as your business expands operations.",
+          icon: (
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="8.5" cy="7" r="4"></circle>
+              <line x1="20" y1="8" x2="20" y2="14"></line>
+              <line x1="23" y1="11" x2="17" y2="11"></line>
+            </svg>
+          )
         }
       ].map((step, index) => (
-        <div key={index} className="step-card">
+        <div key={index} className={`step-card step-card--${step.theme}`}>
+          {/* Circular badge for modern vector icon */}
           <div className="step-circle">
-            <span>{step.icon}</span>
+            {step.icon}
           </div>
 
-          <div className="step-number">{step.number}</div>
+          {/* Clean, absolute numbered pill */}
+          <div className="step-number">
+            {step.number}
+          </div>
 
           <h3 className="step-title">{step.title}</h3>
           <p className="step-description">{step.description}</p>
@@ -207,23 +277,44 @@ const AIWebAppDev = () => {
   </div>
 </section>
       {/* 6. WHY CHOOSE SECTION */}
-      <section className="aiwa__section grey_bar">
-        <div className="aiwa__container">
-          <h2 className="aiwa__title_dark">Why UK & USA Businesses Choose ZonzocTech</h2>
-          <div className="aiwa__grid_3">
-            {whyChoosePoints.map((w, i) => (
-              <div key={i} className="aiwa__service_box hover_lift">
-                <div className="aiwa__box_icon">{w.i}</div>
-                <h4 className="aiwa__box_title_left">{w.t}</h4>
-                <ul className="aiwa__card_bullets_left">
-                  {w.points.map((p, idx) => <li key={idx}><span>›</span> {p}</li>)}
-                </ul>
-              </div>
-            ))}
+ <section className="aiwa__section premium-trust-bg">
+  <div className="aiwa__container">
+    
+    <h2 className="trust-grid-main-title">
+      Why UK & USA Businesses Choose ZonzocTech
+    </h2>
+    
+    <div className="trust-premium-grid">
+      {whyChoosePoints.map((w, i) => (
+        <div key={i} className="trust-premium-card">
+          
+          {/* Top Tech Decorative Element Layout */}
+          <div className="tech-decor-wrapper">
+            <div className="tech-line-nodes"></div>
           </div>
-        </div>
-      </section>
+          
+          <h4 className="trust-premium-card-title">{w.t}</h4>
+          
+          <ul className="trust-premium-list">
+            {w.points.map((p, idx) => (
+              <li key={idx} className="trust-premium-item">
+                {/* CSS Crafted 3D Iridescent Geometric Prism Vector */}
+                <div className="prism-icon" aria-hidden="true">
+                  <div className="prism-face face-top"></div>
+                  <div className="prism-face face-left"></div>
+                  <div className="prism-face face-right"></div>
+                </div>
+                <span className="trust-premium-text">{p}</span>
+              </li>
+            ))}
+          </ul>
 
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
       {/* 7. TECH GRID */}
       <section className="aiwa__section white_bar">
         <div className="aiwa__container">
@@ -265,41 +356,40 @@ const AIWebAppDev = () => {
         </div>
       </section>
 
-     
       {/* --- FINAL CTA --- */}
-<section className="aiwd-final-cta">
-  <div className="aiwd-container">
+      <section className="aiwd-final-cta">
+        <div className="aiwd-container">
 
-    <div className="aiwd-cta-box">
-      
-      <h2 className="aiwd-cta-title">
-        Ready to Build Your AI Website?
-      </h2>
+          <div className="aiwd-cta-box">
+            
+            <h2 className="aiwd-cta-title">
+              Ready to Build Your AI Website?
+            </h2>
 
-      <p className="aiwd-cta-subtext">
-        Let’s turn your idea into a high-converting AI-powered website for your business.
-        Get a free consultation and project roadmap today.
-      </p>
+            <p className="aiwd-cta-subtext">
+              Let’s turn your idea into a high-converting AI-powered website for your business.
+              Get a free consultation and project roadmap today.
+            </p>
 
-      {/* CTA BUTTONS */}
-      <div className="aiwd-hero-actions">
-        <a href="/contact" className="aiwd-btn-primary">
-          Get Free Consultation →
-        </a>
+            {/* CTA BUTTONS */}
+            <div className="aiwd-hero-actions">
+              <a href="/contact" className="aiwd-btn-primary">
+                Get Free Consultation →
+              </a>
 
-        <a href="#work" className="aiwd-btn-secondary">
-          View Portfolio →
-        </a>
-      </div>
+              <a href="#work" className="aiwd-btn-secondary">
+                View Portfolio →
+              </a>
+            </div>
 
-      <p className="aiwd-cta-note">
-        No commitment • No spam • Just real strategy
-      </p>
+            <p className="aiwd-cta-note">
+              No commitment • No spam • Just real strategy
+            </p>
 
-    </div>
+          </div>
 
-  </div>
-</section>
+        </div>
+      </section>
 
       <Footer />
     </div>

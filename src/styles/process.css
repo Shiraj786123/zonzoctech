@@ -1,306 +1,251 @@
-/* =========================================================
-   PROCESS SECTION
-========================================================= */
-.process-section {
-  background: #00448f;
-  padding: 110px 24px;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  position: relative;
-  overflow: hidden;
+/* ==========================================================================
+   ZONZOCTECH PREMIUM SYSTEM ARCHITECTURE PROCESS ROADMAP STYLES
+   ========================================================================== */
+
+section.process-section {
+  position: relative !important;
+  /* Premium, dark glowing midnight-navy radial gradient background */
+  background: radial-gradient(circle at 50% 100%, #061533 0%, #020b1e 100%) !important;
+  color: #ffffff !important;
+  padding: 100px 24px 100px 24px !important;
+  text-align: center !important;
+  overflow: hidden !important;
+  font-family: 'Poppins', system-ui, sans-serif !important;
+  width: 100% !important;
+  display: block !important;
 }
 
-.process-container {
-  max-width: 1320px;
-  margin: 0 auto;
-  width: 100%;
+section.process-section .aiwa__container {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  position: relative !important;
+  z-index: 1 !important;
+  display: block !important;
 }
 
-/* =========================================================
-   SECTION LABEL (CENTERED)
-========================================================= */
-.process-label {
-  display: block;
-  width: fit-content;
-  margin: 0 auto 22px;
-  padding: 8px 18px;
-  background: rgba(56, 189, 248, 0.12);
-  border: 1px solid rgba(56, 189, 248, 0.28);
-  border-radius: 999px;
-  color: #7dd3fc;
-  font-size: 12px;
+/* Header pill label - Styled in striking premium Navy Blue matrix */
+section.process-section .process-label {
+  display: inline-block;
+  padding: 6px 18px;
+  background-color: #0a2558; /* Solid, premium deep navy blue backdrop */
+  border: 1px solid #1e3a8a; /* Defined navy border tracking line */
+  color: #38bdf8; /* High-visibility sky blue typography metrics */
+  border-radius: 9999px;
+  font-size: 0.8rem;
   font-weight: 700;
+  margin-bottom: 24px;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  text-align: center;
-  backdrop-filter: blur(10px);
+  letter-spacing: 0.08em;
+  box-shadow: 0 4px 12px rgba(10, 37, 88, 0.25);
 }
 
-/* =========================================================
-   TITLE & SUBTITLE
-========================================================= */
-.process-title {
-  font-size: 44px;
-  font-weight: 800;
-  line-height: 1.2;
-  color: #ffffff;
-  text-align: center;
-  margin: 0 0 18px;
-  letter-spacing: -0.03em;
+/* Section Header Title */
+section.process-section .aiwa__title_dark {
+  font-size: clamp(2.25rem, 4.5vw, 3rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+  color: #ffffff !important;
+  margin-bottom: 20px !important;
+  letter-spacing: -0.02em !important;
+  margin-top: 0 !important;
 }
 
-.process-title span {
-  color: #38bdf8;
+/* Sky-Blue Accent Text */
+section.process-section .text_light_blue {
+  color: #38bdf8 !important;
+  background-color: transparent !important;
+  display: inline !important;
 }
 
-.process-subtitle {
-  max-width: 720px;
-  margin: 0 auto 70px;
-  font-size: 17px;
-  line-height: 1.75;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.82);
+/* Subtitle Description */
+section.process-section .process-subtitle {
+  font-size: 1.1rem !important;
+  line-height: 1.7 !important;
+  color: #94a3b8 !important; /* Balanced slate tint */
+  max-width: 720px !important;
+  margin: 0 auto 64px auto !important;
+  display: block !important;
 }
 
-/* =========================================================
-   GRID
-========================================================= */
-.steps-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
+/* 5-Column Grid Layout */
+section.process-section .steps-grid {
+  display: grid !important;
+  grid-template-columns: repeat(5, 1fr) !important;
+  gap: 24px !important;
+  width: 100% !important;
 }
 
-/* =========================================================
-   CARD
-========================================================= */
-.step-card {
-  position: relative;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 24px;
-  padding: 30px 24px;
-  min-height: 330px;
+/* ================= THEME TOKEN VARIABLES ================= */
 
-  display: flex;
-  flex-direction: column;
-
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-
-  transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease,
-    border-color 0.35s ease,
-    background 0.35s ease;
+section.process-section .step-card:nth-child(1) {
+  --theme-color: #2563eb;
+  --theme-glow: rgba(37, 99, 235, 0.25);
+  --theme-bg-tint: rgba(37, 99, 235, 0.1);
 }
 
-.step-card:hover {
-  transform: translateY(-8px);
-  background: rgba(255, 255, 255, 0.11);
-  border-color: rgba(56, 189, 248, 0.45);
-  box-shadow:
-    0 24px 60px rgba(0, 0, 0, 0.18),
-    0 0 30px rgba(56, 189, 248, 0.12);
+section.process-section .step-card:nth-child(2) {
+  --theme-color: #a855f7;
+  --theme-glow: rgba(168, 85, 247, 0.25);
+  --theme-bg-tint: rgba(168, 85, 247, 0.1);
 }
 
-/* =========================================================
-   HEADER
-========================================================= */
-.step-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 28px;
-  position: relative;
-  z-index: 2;
+section.process-section .step-card:nth-child(3) {
+  --theme-color: #10b981;
+  --theme-glow: rgba(16, 185, 129, 0.25);
+  --theme-bg-tint: rgba(16, 185, 129, 0.1);
 }
 
-/* =========================================================
-   ICON BOX (VISIBLE ON DARK BLUE)
-========================================================= */
-.step-icon-wrapper {
-  width: 56px;
-  height: 56px;
-  border-radius: 16px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.9);
-
-  color: #00448f; /* icon color */
-
-  box-shadow:
-    0 10px 25px rgba(0, 0, 0, 0.12),
-    0 0 0 4px rgba(255, 255, 255, 0.06);
-
-  flex-shrink: 0;
+section.process-section .step-card:nth-child(4) {
+  --theme-color: #f59e0b;
+  --theme-glow: rgba(245, 158, 11, 0.25);
+  --theme-bg-tint: rgba(245, 158, 11, 0.1);
 }
 
-.step-icon-wrapper svg {
-  width: 24px;
-  height: 24px;
-  stroke: currentColor;
-  stroke-width: 2.2;
+section.process-section .step-card:nth-child(5) {
+  --theme-color: #f43f5e;
+  --theme-glow: rgba(244, 63, 94, 0.25);
+  --theme-bg-tint: rgba(244, 63, 94, 0.1);
 }
 
-/* Hover */
-.step-card:hover .step-icon-wrapper {
-  background: #38bdf8;
-  color: #ffffff;
-  border-color: #38bdf8;
+/* ================= COMPONENT CARD BASE ARCHITECTURE ================= */
+
+section.process-section .step-card {
+  /* Dark Premium glass backdrop - White removed completely */
+  background: rgba(10, 25, 54, 0.4) !important; 
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(30, 58, 138, 0.3) !important; /* Low opacity navy tracking outline */
+  border-radius: 16px !important;
+  padding: 32px 24px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  position: relative !important;
+  overflow: hidden !important;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.3s ease !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
 }
 
-/* =========================================================
-   BIG BACKGROUND NUMBER (HIGHLY VISIBLE)
-========================================================= */
-.step-number {
+/* Card Header Flex Grid layout */
+section.process-section .step-card-header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
+  margin-bottom: 28px !important;
+}
+
+/* Clean SVG Icon Frame Wrapper */
+section.process-section .step-circle {
+  width: 46px !important;
+  height: 46px !important;
+  background-color: var(--theme-bg-tint) !important;
+  color: var(--theme-color) !important;
+  border-radius: 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Step Card Large Watermark Numbers - Striking Navy Blue Layer */
+section.process-section .step-watermark {
+  font-size: 3.5rem !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  color: #1e3a8a !important; /* solid, high-visibility navy blue element */
+  opacity: 0.8 !important; /* Perfectly balanced for dark backgrounds */
+  letter-spacing: -0.04em !important;
+  user-select: none !important;
+  display: block !important;
+  visibility: visible !important;
+  transition: color 0.3s ease, transform 0.3s ease, opacity 0.3s ease !important;
+}
+
+/* Column Heading / Step Card Title - Clean White */
+section.process-section .step-title {
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important; /* Premium White text over deep navy cards */
+  margin-top: 0 !important;
+  margin-bottom: 12px !important;
+  text-align: left !important;
+  letter-spacing: -0.01em !important;
+}
+
+/* Clean Core Description Layouts */
+section.process-section .step-description {
+  font-size: 0.925rem !important;
+  line-height: 1.65 !important;
+  color: #94a3b8 !important; /* Slate grey descriptions for optimal readability */
+  text-align: left !important;
+  margin: 0 0 10px 0 !important;
+}
+
+/* Micro Color Border Track Bar at Card Bottom */
+section.process-section .step-card-indicator-line {
   position: absolute;
-  top: 18px;
-  right: 22px;
-
-  font-size: 72px;
-  font-weight: 900;
-  line-height: 1;
-
-  color: rgba(255, 255, 255, 0.16);
-
-  pointer-events: none;
-  user-select: none;
-  z-index: 1;
-
-  transition: transform 0.35s ease, color 0.35s ease;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3.5px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
 }
 
-.step-card:hover .step-number {
-  transform: scale(1.06);
-  color: rgba(56, 189, 248, 0.26);
+/* ================= HOVER INTERACTIVITY BEHAVIORS ================= */
+
+section.process-section .step-card:hover {
+  transform: translateY(-6px) !important;
+  border-color: var(--theme-color) !important;
+  background: rgba(14, 35, 74, 0.6) !important; /* Darkens slightly on hover for physical feedback */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px var(--theme-glow) !important;
 }
 
-/* =========================================================
-   TITLE
-========================================================= */
-.step-title {
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1.35;
-  color: skyblue;
-  text-align: center;
-  margin: 0 0 14px;
-  position: relative;
-  z-index: 2;
-
-  min-height: 54px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
+section.process-section .step-card:hover .step-circle {
+  background-color: var(--theme-color) !important;
+  color: #ffffff !important;
+  transform: scale(1.05);
 }
 
-/* =========================================================
-   DESCRIPTION
-========================================================= */
-.step-description {
-  font-size: 14px;
-  line-height: 1.75;
-  color: rgba(255, 255, 255, 0.78);
-  text-align: center;
-  margin: 0;
-  position: relative;
-  z-index: 2;
-
-  /* Exactly 4 lines */
-  height: calc(14px * 1.75 * 4);
-  min-height: calc(14px * 1.75 * 4);
-  max-height: calc(14px * 1.75 * 4);
-
-  overflow: hidden;
+/* Numbers glow subtly matching active token on hover */
+section.process-section .step-card:hover .step-watermark {
+  color: var(--theme-color) !important;
+  opacity: 1 !important;
+  transform: scale(1.04) !important;
 }
 
-/* =========================================================
-   TABLET
-========================================================= */
-@media (min-width: 640px) {
-  .steps-grid {
-    grid-template-columns: repeat(2, 1fr);
+section.process-section .step-card:hover .step-card-indicator-line {
+  background-color: var(--theme-color) !important;
+}
+
+/* ================= SYSTEM DESIGN RESPONSIVE BENCHMARKS ================= */
+
+@media (max-width: 1100px) {
+  section.process-section .steps-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 20px !important;
   }
 }
 
-/* =========================================================
-   LARGE TABLET
-========================================================= */
-@media (min-width: 900px) {
-  .steps-grid {
-    grid-template-columns: repeat(3, 1fr);
+@media (max-width: 768px) {
+  section.process-section {
+    padding: 80px 24px !important;
   }
-}
-
-/* =========================================================
-   DESKTOP - 5 CARDS IN ONE ROW
-========================================================= */
-@media (min-width: 1200px) {
-  .steps-grid {
-    grid-template-columns: repeat(5, 1fr);
-    gap: 18px;
+  section.process-section .steps-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
   }
-
-  .step-card {
-    min-height: 340px;
-    padding: 30px 20px;
-  }
-
-  .step-title {
-    font-size: 18px;
-    min-height: 52px;
-  }
-
-  .step-description {
-    font-size: 13.5px;
-    line-height: 1.7;
-    height: calc(13.5px * 1.7 * 4);
-    min-height: calc(13.5px * 1.7 * 4);
-    max-height: calc(13.5px * 1.7 * 4);
-  }
-}
-
-/* =========================================================
-   MOBILE
-========================================================= */
-@media (max-width: 639px) {
-  .process-section {
-    padding: 80px 20px;
-  }
-
-  .process-title {
-    font-size: 32px;
-  }
-
-  .process-subtitle {
-    font-size: 15px;
-    margin-bottom: 48px;
-  }
-
-  .step-card {
-    min-height: auto;
-    padding: 28px 22px;
-  }
-
-  .step-number {
-    font-size: 58px;
-    top: 14px;
-    right: 18px;
-  }
-
-  .step-title {
-    font-size: 18px;
-    min-height: auto;
-  }
-
-  .step-description {
-    height: auto;
-    min-height: auto;
-    max-height: none;
+  section.process-section .step-card {
+    padding: 28px 24px !important;
+    max-width: 480px !important;
+    margin: 0 auto !important;
+    width: 100% !important;
   }
 }

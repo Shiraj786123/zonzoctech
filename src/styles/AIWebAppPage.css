@@ -33,7 +33,7 @@
 
 /* 3. EXAMPLES BAR */
 .aiwa__bar_row { display: flex; align-items: stretch; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: #fff; max-width: 1100px; margin: 0 auto 30px; }
-.aiwa__bar_num { width: 15%; background: var(--navy); color: var(--accent); display: flex; justify-content: center; align-items: center; }
+.aiwa__bar_num { width: 15%; background: skyblue; color: var(--accent); display: flex; justify-content: center; align-items: center; }
 .aiwa__bar_num h2 { font-size: 40px; font-weight: 900; }
 .aiwa__bar_content { width: 85%; padding: 30px; line-height: 1.8; color: #475569; }
 .aiwa__grid_title { text-align: center; margin-bottom: 20px; color: var(--navy); }
@@ -934,7 +934,7 @@ h2.aiwa__title_light {
   font-size: 1.15rem;
   font-weight: 700;
   line-height: 1.3;
-  color: #0f172a;
+  color:skyblue;
   min-height: 2.6em;
 }
 
@@ -997,4 +997,1078 @@ h2.aiwa__title_light {
     font-size: 0.9rem;
   }
 }
+
+
+
+
+
+
+
+/* ================= GRID CONTAINER ================= */
+
+.aiwa__grid_title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a; /* Slate-900 */
+  text-align: center;
+  margin-top: 48px;
+  margin-bottom: 28px;
+  letter-spacing: -0.01em;
+}
+
+.aiwa__grid_examples_fixed {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 Columns on desktop for a balanced, spacious feel */
+  gap: 16px;
+  width: 100%;
+  max-width: 1000px; /* Constrains width slightly to feel premium and compact */
+  margin: 0 auto;
+}
+
+/* ================= MINIMALIST STRIPE-STYLE CARD ================= */
+
+.aiwa__example_stripe_card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0; /* Default subtle light-gray border */
+  border-left: 4px solid #1296ec; /* Strong brand-blue left accent border */
+  border-radius: 12px;
+  padding: 20px 24px;
+  cursor: pointer;
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.01); /* Soft subtle shadow */
+}
+
+/* Text inside the card */
+.aiwa__stripe_text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b; /* Slate-800 */
+  line-height: 1.4;
+  text-align: left;
+}
+
+/* Slide Arrow Container */
+.aiwa__stripe_arrow {
+  color: rgba(18, 150, 236, 0.4); /* Muted blue arrow */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.22s ease, color 0.22s ease;
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+
+/* ================= HOVER INTERACTION ================= */
+
+.aiwa__example_stripe_card:hover {
+  transform: translateX(4px); /* Gently slides card to the right */
+  border-color: #1296ec; /* Match the top, right, bottom borders to the left accent */
+  box-shadow: 0 8px 24px rgba(18, 150, 236, 0.05); /* Soft outer blue glow */
+  background-color: rgba(18, 150, 236, 0.01); /* Extremely soft blue hover tint */
+}
+
+/* Slides the micro-arrow forward and turns it solid blue on hover */
+.aiwa__example_stripe_card:hover .aiwa__stripe_arrow {
+  color: #1296ec;
+  transform: translateX(4px);
+}
+
+/* ================= RESPONSIVE ADJUSTMENTS ================= */
+
+@media (max-width: 768px) {
+  .aiwa__grid_examples_fixed {
+    grid-template-columns: 1fr; /* Stacks to 1 column on mobile/tablets */
+    gap: 12px;
+  }
+  .aiwa__example_stripe_card {
+    padding: 16px 20px;
+  }
+}
+
+
+
+
+/* ================= HERO WRAPPER ================= */
+
+section.aiwa__hero_section {
+  position: relative !important;
+  /* Applies the deep glowing navy background */
+  background: radial-gradient(circle at 50% 90%, #003d73 0%, #001b3a 60%, #000f21 100%) !important;
+  color: #ffffff !important;
+  padding: 95px 24px 85px 24px !important; /* Balanced standard vertical padding */
+  text-align: center !important;
+  overflow: hidden !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  width: 100% !important;
+  display: block !important;
+}
+
+/* Scopes container styling to the hero to prevent other sections from shrinking */
+section.aiwa__hero_section .aiwa__container {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  position: relative !important;
+  z-index: 1 !important;
+  display: block !important;
+}
+
+/* ================= PILL BADGE LABEL ================= */
+
+section.aiwa__hero_section .aiwa__hero_badge_wrapper {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important; /* Space between dot and text */
+  padding: 6px 14px !important;
+  background-color: rgba(56, 189, 248, 0.08) !important; /* Soft sky-blue background tint */
+  border: 1px solid rgba(56, 189, 248, 0.25) !important; /* Soft border edge */
+  border-radius: 9999px !important; /* Pill shape */
+  margin-bottom: 28px !important;
+}
+
+section.aiwa__hero_section .aiwa__hero_badge_dot {
+  width: 8px !important;
+  height: 8px !important;
+  background-color: #38bdf8 !important; /* Active sky-blue color */
+  border-radius: 50% !important;
+  display: inline-block !important;
+  position: relative !important;
+}
+
+/* Glowing outer pulse ring */
+section.aiwa__hero_section .aiwa__hero_badge_dot::after {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 50% !important;
+  background-color: #38bdf8 !important;
+  animation: badgePulse 2s infinite ease-in-out !important;
+}
+
+section.aiwa__hero_section .aiwa__hero_badge_text {
+  color: #38bdf8 !important;
+  font-size: 0.825rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  line-height: 1 !important;
+}
+
+/* ================= TYPOGRAPHY ================= */
+
+/* Massive, tight-lettering header styling */
+section.aiwa__hero_section .aiwa__heading {
+  font-size: 64px !important; /* Solid desktop heading size */
+  font-weight: 800 !important; /* Extra bold */
+  line-height: 1.15 !important; /* Tight line height */
+  color: #ffffff !important; /* Forces white text so it is visible */
+  margin-bottom: 28px !important;
+  letter-spacing: -0.03em !important;
+  margin-top: 0 !important;
+}
+
+/* Sky-Blue Accent Text */
+section.aiwa__hero_section .text_light_blue {
+  color: #38bdf8 !important;
+  background-color: transparent !important;
+  display: inline !important;
+}
+
+/* Supporting Hero Text */
+section.aiwa__hero_section .aiwa__hero_text_white {
+  font-size: 1.15rem !important;
+  line-height: 1.65 !important;
+  color: rgba(255, 255, 255, 0.85) !important; /* Premium soft white */
+  max-width: 800px !important;
+  margin: 0 auto 36px auto !important;
+  display: block !important;
+}
+
+/* ================= CTA BUTTONS ================= */
+
+section.aiwa__hero_section .aiwa__hero_actions {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 16px !important;
+  margin-bottom: 32px !important;
+  flex-wrap: wrap !important;
+}
+
+/* Primary Button (Solid Sky Blue with Dark Navy text) */
+section.aiwa__hero_section .aiwa__btn_primary {
+  display: inline-block !important;
+  background-color: #38bdf8 !important;
+  color: #001f3f !important; /* Force high-contrast text color */
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  padding: 14px 28px !important;
+  border-radius: 10px !important;
+  text-decoration: none !important;
+  transition: background-color 0.2s ease !important;
+}
+
+section.aiwa__hero_section .aiwa__btn_primary:hover {
+  background-color: #25aff2 !important;
+}
+
+/* Secondary Button (Outlined) */
+section.aiwa__hero_section .aiwa__btn_secondary {
+  display: inline-block !important;
+  background-color: transparent !important;
+  color: #ffffff !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  padding: 14px 28px !important;
+  border: 1.5px solid rgba(73, 188, 244, 0.5) !important; /* Semi-transparent blue border */
+  border-radius: 10px !important;
+  text-decoration: none !important;
+  transition: border-color 0.2s ease, background-color 0.2s ease !important;
+}
+
+section.aiwa__hero_section .aiwa__btn_secondary:hover {
+  border-color: #38bdf8 !important;
+  background-color: rgba(56, 189, 248, 0.08) !important;
+}
+
+/* Trust text below buttons */
+section.aiwa__hero_section .aiwa__hero_trust_text {
+  font-size: 0.875rem !important;
+  color: rgba(255, 255, 255, 0.5) !important; /* Muted gray-blue */
+  margin: 0 !important;
+  display: block !important;
+}
+
+/* ================= MEDIA QUERIES ================= */
+
+@keyframes badgePulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  section.aiwa__hero_section .aiwa__heading {
+    font-size: 48px !important; /* Balanced tablet size */
+  }
+}
+
+@media (max-width: 640px) {
+  section.aiwa__hero_section .aiwa__heading {
+    font-size: 36px !important; /* Legible mobile size */
+    line-height: 1.2 !important;
+  }
+}
+
+
+
+
+
+
+/* ================= STATS SECTION CONTAINER ================= */
+
+/* Ensures the outer container doesn't constrict the widened stats box */
+.aiwa__stats_section .aiwa__container {
+  width: 100% !important;
+  max-width: 1360px !important; /* Wide container allowance */
+  margin: 0 auto !important;
+  padding: 0 24px !important;
+}
+
+/* ================= FLOATING CARD WRAPPER ================= */
+
+.aiwa__stats_border_box {
+  background-color: #ffffff !important;
+  border: 1px solid #f1f5f9 !important; /* Soft border */
+  border-radius: 20px !important; /* Clean rounded card corners */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.03) !important; /* Gentle shadow depth */
+  
+  /* Increased horizontal length (stretches wider) */
+  width: 100% !important;
+  max-width: 1300px !important; 
+  margin: 0 auto !important;
+  
+  /* Decreased vertical thickness (thinner horizontal bar) */
+  padding: 12px 24px !important; 
+  
+  display: flex !important;
+  justify-content: space-around !important;
+  align-items: center !important;
+  flex-wrap: nowrap !important; /* Keeps all stat items in one horizontal line */
+}
+
+/* ================= STAT ITEMS & SEPARATORS ================= */
+
+.aiwa__stats_border_box .stat_item {
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  padding: 2px 12px !important; /* Compact interior vertical padding */
+  text-align: center !important;
+}
+
+/* Slim vertical gray dividers */
+.aiwa__stats_border_box .stat_item:not(:last-child)::after {
+  content: "" !important;
+  position: absolute !important;
+  right: 0 !important;
+  top: 15% !important;
+  height: 70% !important;
+  width: 1px !important;
+  background-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+/* ================= TYPOGRAPHY ================= */
+
+/* Saturated Blue Numbers */
+.aiwa__stats_border_box .stat_num {
+  font-size: 2.25rem !important;
+  font-weight: 800 !important;
+  color: #004b93 !important; /* Brand deep blue */
+  line-height: 1.1 !important;
+  letter-spacing: -0.01em !important;
+}
+
+/* Uppercase Slate-Gray Labels */
+.aiwa__stats_border_box .stat_lbl {
+  font-size: 0.75rem !important;
+  color: #64748b !important; /* Slate gray */
+  margin-top: 4px !important; /* Tight margin to match thinner layout */
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* ================= MOBILE RESPONSIVE COLLAPSE ================= */
+
+@media (max-width: 900px) {
+  .aiwa__stats_border_box {
+    flex-direction: column !important;
+    gap: 24px !important;
+    padding: 30px 16px !important;
+    width: calc(100% - 32px) !important;
+    max-width: 500px !important;
+  }
+  .aiwa__stats_border_box .stat_item:not(:last-child)::after {
+    display: none !important; /* Hides vertical separators when stacked on mobile screens */
+  }
+}
+
+
+
+
+
+/* ================= SERVICES SECTION WRAPPER ================= */
+
+section.aiwa__section.grey_bar {
+  background-color: #f8fafc !important; /* Soft light-gray background */
+  padding: 80px 24px !important; 
+  width: 100% !important;
+  display: block !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+section.aiwa__section.grey_bar .aiwa__container {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  position: relative !important;
+  z-index: 1 !important;
+  display: block !important;
+}
+
+/* Section Title */
+section.aiwa__section.grey_bar .aiwa__title_dark {
+  font-size: 2.25rem !important;
+  font-weight: 800 !important;
+  color: #0f172a !important; /* Slate-900 */
+  text-align: center !important;
+  margin-top: 0 !important;
+  margin-bottom: 40px !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* ================= 3-COLUMN SERVICE GRID ================= */
+
+section.aiwa__section.grey_bar .aiwa__grid_3 {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 24px !important;
+  width: 100% !important;
+}
+
+/* The Service Card Box */
+section.aiwa__section.grey_bar .aiwa__service_box {
+  background-color: #ffffff !important;
+  border: 1px solid #eef2f6 !important; /* Soft border edge */
+  border-radius: 16px !important;
+  padding: 24px !important; /* Slightly tighter padding for a balanced fit */
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.015) !important;
+}
+
+/* Card Hover State */
+section.aiwa__section.grey_bar .aiwa__service_box.hover_lift:hover {
+  transform: translateY(-4px) !important;
+  border-color: rgba(18, 150, 236, 0.25) !important;
+  box-shadow: 0 12px 24px rgba(18, 150, 236, 0.06) !important;
+}
+
+/* ================= NEW SIDE-BY-SIDE HEADER ================= */
+
+/* Groups the Icon and Title horizontally to eliminate the empty space */
+section.aiwa__section.grey_bar .aiwa__service_header {
+  display: flex !important;
+  align-items: center !important; /* Vertically centers icon and title */
+  gap: 16px !important; /* Space between icon and text */
+  margin-bottom: 20px !important; /* Margins down to the bullet points */
+  width: 100% !important;
+}
+
+/* Card Icon (No bottom margin needed now) */
+section.aiwa__section.grey_bar .aiwa__box_icon {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 44px !important;
+  height: 44px !important;
+  background-color: rgba(18, 150, 236, 0.08) !important; /* Soft blue tint */
+  color: #1296ec !important; /* Brand blue icon color */
+  border-radius: 10px !important;
+  font-size: 1.35rem !important;
+  margin-bottom: 0 !important; /* Reset margin since it aligns in a row */
+  flex-shrink: 0; /* Prevents icon from squeezing on multiple line titles */
+}
+
+/* Card Title (No bottom margin needed now) */
+section.aiwa__section.grey_bar .aiwa__box_title_left {
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  color: #1e293b !important; /* Slate-800 */
+  margin: 0 !important; /* Reset margin */
+  line-height: 1.35 !important;
+}
+
+/* ================= BULLET LISTS ================= */
+
+section.aiwa__section.grey_bar .aiwa__card_bullets_left {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+section.aiwa__section.grey_bar .aiwa__card_bullets_left li {
+  font-size: 0.95rem !important;
+  line-height: 1.55 !important;
+  color: #475569 !important; /* Muted slate gray */
+  margin-bottom: 12px !important;
+  display: flex !important;
+  align-items: flex-start !important;
+}
+
+section.aiwa__section.grey_bar .aiwa__card_bullets_left li:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Bullet character (›) styled in brand blue */
+section.aiwa__section.grey_bar .aiwa__card_bullets_left li span {
+  color: #1296ec !important;
+  font-size: 1.25rem !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  margin-right: 8px !important;
+  margin-top: -2px !important;
+}
+
+/* ================= RESPONSIVE ADJUSTMENTS ================= */
+
+@media (max-width: 1024px) {
+  section.aiwa__section.grey_bar .aiwa__grid_3 {
+    grid-template-columns: repeat(2, 1fr) !important; /* 2 Columns on Tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  section.aiwa__section.grey_bar {
+    padding: 60px 24px !important;
+  }
+  section.aiwa__section.grey_bar .aiwa__grid_3 {
+    grid-template-columns: 1fr !important; /* 1 Column on Mobile viewports */
+    gap: 16px !important;
+  }
+  section.aiwa__section.grey_bar .aiwa__service_box {
+    padding: 20px !important;
+  }
+}
+
+
+
+
+
+
+
+/* ================= MAIN CONTAINER WRAPPER ================= */
+
+section.process-section {
+  position: relative !important;
+  background: radial-gradient(circle at 50% 90%, #003d73 0%, #001b3a 60%, #000f21 100%) !important;
+  color: #ffffff !important;
+  padding: 95px 24px 85px 24px !important;
+  text-align: center !important;
+  overflow: hidden !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  width: 100% !important;
+  display: block !important;
+}
+
+section.process-section .aiwa__container {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  position: relative !important;
+  z-index: 1 !important;
+  display: block !important;
+}
+
+/* Header pill label */
+section.process-section .process-label {
+  display: inline-block;
+  padding: 6px 16px;
+  background-color: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  color: #38bdf8;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Header Title */
+section.process-section .aiwa__title_dark {
+  font-size: clamp(2.25rem, 4.5vw, 3.25rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.15 !important;
+  color: #ffffff !important;
+  margin-bottom: 20px !important;
+  letter-spacing: -0.02em !important;
+  margin-top: 0 !important;
+}
+
+section.process-section .text_light_blue {
+  color: #38bdf8 !important;
+  background-color: transparent !important;
+  display: inline !important;
+}
+
+/* Subtitle description */
+section.process-section .process-subtitle {
+  font-size: 1.15rem !important;
+  line-height: 1.65 !important;
+  color: rgba(255, 255, 255, 0.75) !important;
+  max-width: 750px !important;
+  margin: 0 auto 56px auto !important;
+  display: block !important;
+}
+
+/* 5-Column Steps Grid */
+section.process-section .steps-grid {
+  display: grid !important;
+  grid-template-columns: repeat(5, 1fr) !important;
+  gap: 20px !important;
+  width: 100% !important;
+}
+
+/* ================= THEMED INDIVIDUAL VARIABLES ================= */
+
+/* Discovery (Blue Theme) */
+.step-card--blue {
+  --theme-color: #1296ec;
+  --theme-tint: rgba(18, 150, 236, 0.08);
+  --theme-light-tint: rgba(18, 150, 236, 0.12);
+  --theme-super-light: rgba(18, 150, 236, 0.04);
+  --card-bg: rgba(18, 150, 236, 0.015); /* Soft background tint */
+  --theme-border: rgba(18, 150, 236, 0.12); /* Subtle colored border */
+  --theme-hover-glow: rgba(18, 150, 236, 0.1);
+}
+
+/* Planning (Purple Theme) */
+.step-card--purple {
+  --theme-color: #a855f7;
+  --theme-tint: rgba(168, 85, 247, 0.08);
+  --theme-light-tint: rgba(168, 85, 247, 0.12);
+  --theme-super-light: rgba(168, 85, 247, 0.04);
+  --card-bg: rgba(168, 85, 247, 0.015);
+  --theme-border: rgba(168, 85, 247, 0.12);
+  --theme-hover-glow: rgba(168, 85, 247, 0.1);
+}
+
+/* Development (Emerald Green Theme) */
+.step-card--emerald {
+  --theme-color: #10b981;
+  --theme-tint: rgba(16, 185, 129, 0.08);
+  --theme-light-tint: rgba(16, 185, 129, 0.12);
+  --theme-super-light: rgba(16, 185, 129, 0.04);
+  --card-bg: rgba(16, 185, 129, 0.015);
+  --theme-border: rgba(16, 185, 129, 0.12);
+  --theme-hover-glow: rgba(16, 185, 129, 0.1);
+}
+
+/* Validation (Amber Theme) */
+.step-card--amber {
+  --theme-color: #f59e0b;
+  --theme-tint: rgba(245, 158, 11, 0.08);
+  --theme-light-tint: rgba(245, 158, 11, 0.12);
+  --theme-super-light: rgba(245, 158, 11, 0.04);
+  --card-bg: rgba(245, 158, 11, 0.015);
+  --theme-border: rgba(245, 158, 11, 0.12);
+  --theme-hover-glow: rgba(245, 158, 11, 0.1);
+}
+
+/* Launch (Rose Theme) */
+.step-card--rose {
+  --theme-color: #f43f5e;
+  --theme-tint: rgba(244, 63, 94, 0.08);
+  --theme-light-tint: rgba(244, 63, 94, 0.12);
+  --theme-super-light: rgba(244, 63, 94, 0.04);
+  --card-bg: rgba(244, 63, 94, 0.015);
+  --theme-border: rgba(244, 63, 94, 0.12);
+  --theme-hover-glow: rgba(244, 63, 94, 0.1);
+}
+
+/* ================= STEP CARD STYLING ================= */
+
+section.process-section .step-card {
+  background-color:white !important; /* Soft custom tint background always visible */
+  border: 1px solid var(--theme-border) !important; /* Subtle colored border always visible */
+  border-radius: 16px !important;
+  padding: 36px 20px 28px 20px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  position: relative !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.01) !important;
+}
+
+/* Active Hover State (Custom variables animate smoothly) */
+section.process-section .step-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 15px 30px var(--theme-hover-glow) !important; /* Soft glowing color shadow */
+  border-color: var(--theme-color) !important; /* Solid accent border color */
+  background-color: lightblue !important; /* Solid white background on hover */
+}
+
+/* Top-Right Numbered Badge */
+section.process-section .step-number {
+  position: absolute !important;
+  top: 14px !important;
+  right: 14px !important;
+  width: 24px !important;
+  height: 24px !important;
+  background-color: var(--theme-tint) !important;
+  color: navy !important;
+  border-radius: 50% !important;
+  font-size: 0.8rem !important;
+  font-weight: 800 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.22s ease !important;
+}
+
+section.process-section .step-card:hover .step-number {
+  background-color: var(--theme-color) !important;
+  color: #ffffff !important;
+}
+
+/* Step Circle / Icon Badge */
+section.process-section .step-circle {
+  width: 64px !important;
+  height: 64px !important;
+  background: radial-gradient(circle, var(--theme-light-tint) 0%, var(--theme-super-light) 100%) !important;
+  color: var(--theme-color) !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: 24px !important;
+  transition: all 0.22s ease !important;
+  border: 1px solid var(--theme-tint) !important;
+}
+
+section.process-section .step-card:hover .step-circle {
+  background: var(--theme-color) !important;
+  color: #ffffff !important;
+  border-color: var(--theme-color) !important;
+}
+
+/* Step Card Title */
+section.process-section .step-title {
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  color: #1e293b !important; /* Crisp Slate-800 */
+  margin-top: 0 !important;
+  margin-bottom: 12px !important;
+  text-align: center !important;
+}
+
+/* Step Description */
+section.process-section .step-description {
+  font-size: 0.875rem !important;
+  line-height: 1.55 !important;
+  color: #64748b !important; /* Slate-500 */
+  text-align: center !important;
+  margin: 0 !important;
+}
+
+/* ================= MEDIA BREAKPOINTS ================= */
+
+@media (max-width: 1024px) {
+  section.process-section .steps-grid {
+    grid-template-columns: repeat(3, 1fr) !important; /* 3 Columns on Tablet screens */
+    gap: 16px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  section.process-section {
+    padding: 70px 24px !important;
+  }
+  section.process-section .steps-grid {
+    grid-template-columns: 1fr !important; /* 1 Column on Mobile screens */
+    gap: 16px !important;
+  }
+  section.process-section .step-card {
+    padding: 28px 20px !important;
+    max-width: 450px !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+  }
+}
+
+
+
+/* Deep premium theme background */
+.glass-trust-bg {
+  background: #030712; 
+  padding: 100px 24px;
+}
+
+.trust-header-block {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.trust-tagline {
+  color: #38bdf8;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.aiwa__title_dark {
+  color: #ffffff !important;
+  font-size: 2.5rem;
+  margin-top: 10px;
+}
+
+/* Glass card styling */
+.trust-glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 32px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.trust-glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: radial-gradient(800px circle at var(--x, 0px) var(--y, 0px), rgba(56, 189, 248, 0.06), transparent 40%);
+  border-radius: 16px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.trust-glass-card:hover::before {
+  opacity: 1;
+}
+
+.trust-glass-card:hover {
+  border-color: rgba(56, 189, 248, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.card-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.card-index {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.05);
+  font-family: monospace;
+}
+
+.aiwa__box_icon-modern {
+  background: rgba(56, 189, 248, 0.1);
+  padding: 10px;
+  border-radius: 10px;
+  display: inline-flex;
+}
+
+.aiwa__box_title_left {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+/* Minimalist custom list bullet structure */
+.aiwa__card_bullets_left {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.aiwa__card_bullets_left li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.bullet-svg {
+  width: 16px;
+  height: 16px;
+  fill: #38bdf8;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+
+
+
+
+
+/* ==========================================================================
+   PREMIUM 3D PRISM TRUST GRID LAYOUT
+   ========================================================================== */
+
+.premium-trust-bg {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%) !important;
+  padding: 100px 24px !important;
+}
+
+.trust-grid-main-title {
+  font-family: 'Poppins', system-ui, sans-serif !important;
+  font-size: 2.5rem !important;
+  font-weight: 800 !important;
+  color: #0f172a !important;
+  text-align: center !important;
+  margin-bottom: 64px !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* Stable Responsive Grid Container Framework */
+.trust-premium-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 32px !important;
+  max-width: 1240px !important;
+  margin: 0 auto !important;
+}
+
+/* Light Glassmorphism Elevated Dashboard Cards */
+.trust-premium-card {
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(16px) saturate(120%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(120%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+  border-radius: 20px !important;
+  padding: 40px 32px 32px 32px !important;
+  box-shadow: 0 10px 30px -5px rgba(148, 163, 184, 0.15),
+              0 4px 12px -2px rgba(148, 163, 184, 0.08) !important;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  position: relative !important;
+}
+
+.trust-premium-card:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 22px 40px -8px rgba(100, 116, 139, 0.25) !important;
+}
+
+/* Decorative Technical Infrastructure Elements (Top Right Accent lines) */
+.tech-decor-wrapper {
+  position: absolute !important;
+  top: 24px;
+  right: 28px;
+  width: 70px;
+  height: 30px;
+}
+
+.tech-line-nodes {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #cbd5e1 70%, #94a3b8);
+  position: relative;
+}
+
+.tech-line-nodes::before,
+.tech-line-nodes::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #94a3b8;
+  top: -2px;
+}
+.tech-line-nodes::before { right: 20px; }
+.tech-line-nodes::after { right: 0px; background: #64748b; }
+
+/* Card Typography Setup */
+.trust-premium-card-title {
+  font-family: 'Poppins', system-ui, sans-serif !important;
+  font-size: 1.4rem !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+  margin: 0 0 24px 0 !important;
+  letter-spacing: -0.01em !important;
+}
+
+.trust-premium-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+}
+
+.trust-premium-item {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 14px !important;
+}
+
+.trust-premium-text {
+  font-size: 1.02rem !important;
+  color: #334155 !important;
+  line-height: 1.5 !important;
+  font-weight: 500 !important;
+}
+
+/* ==========================================================================
+   CSS ENGINE: 3D IRIDESCENT GEOMETRIC CRYSTAL PRISM BULLET
+   ========================================================================== */
+.prism-icon {
+  position: relative !important;
+  width: 16px !important;
+  height: 20px !important;
+  margin-top: 3px !important;
+  flex-shrink: 0 !important;
+  transform-style: preserve-3d !important;
+  transform: rotateX(-10deg) rotateY(20deg) !important;
+}
+
+.prism-face {
+  position: absolute !important;
+  width: 0 !important;
+  height: 0 !important;
+  border-style: solid !important;
+}
+
+/* Top Face Cap Tinting */
+.face-top {
+  top: 0;
+  left: 0;
+  border-width: 0 8px 10px 8px !important;
+  border-color: transparent transparent #cbd5e1 transparent !important;
+  filter: drop-shadow(0 0 1px rgba(255,255,255,0.4));
+  background: linear-gradient(135deg, #a5b4fc, #67e8f9) !important;
+  -webkit-background-clip: padding-box;
+  opacity: 0.85;
+}
+
+/* Left Lower Segment Shading Base */
+.face-left {
+  top: 10px;
+  left: 0;
+  border-width: 10px 8px 0 0 !important;
+  border-color: #818cf8 transparent transparent transparent !important;
+  background: linear-gradient(200deg, #818cf8, #c084fc) !important;
+  opacity: 0.9;
+}
+
+/* Right Lower Segment Shading Base */
+.face-right {
+  top: 10px;
+  left: 8px;
+  border-width: 10px 0 0 8px !important;
+  border-color: #22d3ee transparent transparent transparent !important;
+  background: linear-gradient(340deg, #22d3ee, #818cf8) !important;
+  opacity: 0.95;
+}
+
+/* ==========================================================================
+   RESPONSIVE LAYOUT MATRIX BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .trust-premium-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+  }
+  .trust-grid-main-title {
+    font-size: 2.1rem !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .trust-premium-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  .trust-grid-main-title {
+    font-size: 1.75rem !important;
+    margin-bottom: 40px !important;
+  }
+  .trust-premium-card {
+    padding: 32px 24px 24px 24px !important;
+  }
+}
+
 

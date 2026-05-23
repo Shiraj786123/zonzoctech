@@ -7,10 +7,12 @@ const Hero = ({ onCtaClick }) => {
     <section className="hero-section" role="region" aria-label="Hero">
       <div className="hero-inner">
         <div className="hero-copy">
-          {/* Professional Badge */}
-          <div className="hero-badge">
-            <span>Next-Gen Web Solutions</span>
-          </div>
+          
+          {/* Top Label / Pill Badge with Safe inline-span wrapper */}
+          <span className="hero-badge">
+            <span className="hero-badge-dot"></span>
+            <span className="hero-badge-text">Next-Gen Web Solutions</span>
+          </span>
 
           <h1 className="hero-main-title">
             AI-Powered Web Development <br className="desktop-only" />

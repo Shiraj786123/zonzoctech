@@ -40,7 +40,7 @@
 .footer-tagline {
   font-size: 13px;
   font-weight: 700;
-  color: black;
+  color: skyblue;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 12px;
@@ -79,12 +79,12 @@
 }
 
 .footer-column-title {
-  font-size: 13px;
+  font-size: 20px;
   font-weight: 700;
-  color: #111827;
+  color:skyblue !important;
   margin-bottom: 24px;
   text-transform: uppercase;
-  height: 20px; /* Aligns all headers horizontally */
+  height: 24px;
 }
 
 .footer-links {
@@ -214,7 +214,7 @@
 
 
 .footer {
-  background: #efeff8;
+  background:white;
   color: #000000;
   border-top: 1px solid #e2e8f0;
 }
@@ -253,9 +253,9 @@
 }
 
 .footer-tagline {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
-  color: black;
+  color: navy;
   text-transform: uppercase;
   margin-bottom: 12px;
 }
@@ -272,7 +272,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 14px;
   padding: 14px 24px;
   background: #00448f;
   color: #ffffff !important;
@@ -294,14 +294,7 @@
   box-shadow: 0 4px 15px rgba(0, 68, 143, 0.3);
 }
 
-.footer-column-title {
-  font-size: 13px;
-  font-weight: 700;
-  color: #111827;
-  margin-bottom: 24px;
-  text-transform: uppercase;
-  height: 20px;
-}
+
 
 .footer-links {
   list-style: none;
@@ -388,7 +381,7 @@
 
 .footer-bottom {
   padding: 30px 24px;
-  background-color: #00448f;
+  background-color: rgb(1, 1, 56);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -447,4 +440,224 @@
     gap: 20px;
     text-align: center;
   }
+}
+
+
+h6.footer-column-title {
+  font-size: 15px !important;
+  color: navy !important;
+}
+
+
+
+
+.contact-heading {
+  color: navy;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+
+
+
+
+
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.footer-logo-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  display: block;
+}
+
+.footer-logo-text {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+
+
+
+/* Ensure the branding area aligns beautifully */
+.footer-brand {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+}
+
+/* Flex frame for image and typography title */
+.footer-logo {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  margin-bottom: 20px !important;
+}
+
+/* Constrain dimensions of favicon graphic */
+.footer-logo-img {
+  width: 34px !important;
+  height: 34px !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+/* Premium identity typography branding rules */
+.footer-logo-text {
+  font-size: 1.5rem !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+  letter-spacing: -0.03em !important;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+/* Clean slate tinting for text links */
+.footer-links a {
+  color: #94a3b8 !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+
+.footer-links a:hover {
+  color: #38bdf8 !important; /* Highlights sky-blue on hover */
+}
+
+
+
+
+/* Container framework that aligns icon and text side-by-side */
+.footer-logo {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin-bottom: 20px !important;
+  width: auto !important;
+  height: 40px !important; /* Fixes height container space */
+}
+
+/* Prevents your favicon from stretching or blowing up out of scale */
+.footer-logo-img {
+  width: 200px !important;
+  height: 400px !important;
+  margin-left: -30px !important; /* Adjusts for any extra spacing */
+  object-fit: contain !important; /* Forces image to keep its original shape */
+  display: inline-block !important;
+  flex-shrink: 0 !important; /* Prevents container from squeezing it */
+}
+
+/* Premium typographic label sitting next to the icon */
+.footer-logo-text {
+  font-size: 1.6rem !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+  letter-spacing: -0.03em !important;
+  font-family: 'Poppins', system-ui, sans-serif !important;
+  line-height: 1 !important;
+  text-transform: none !important;
+}
+
+/* Tagline layout adjustments directly underneath */
+.footer-tagline {
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  color: navy !important; /* Sky Blue accent font color */
+  letter-spacing: 0.08em !important;
+  margin-top: 4px !important;
+  margin-bottom: 14px !important;
+}
+
+
+
+/* ==========================================================================
+   FOOTER BRAND COLUMN SPACING FIXES
+   ========================================================================== */
+
+/* Main brand column container layout framework */
+.footer-brand {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+}
+
+/* 1. Spacing directly beneath your main branding row */
+.footer-logo {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  margin-bottom: 8px !important; /* Kept tight to the uppercase subtitle */
+}
+
+/* 2. Spacing beneath the uppercase subtitle line */
+.footer-tagline {
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  color: #1e3a8a !important; /* Using your premium navy accent tone */
+  letter-spacing: 0.08em !important;
+  margin-top: 0 !important;
+  margin-bottom: 20px !important; /* Creates breathing room above description */
+}
+
+/* 3. Spacing beneath the long descriptions paragraph */
+.footer-description {
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
+  color: #475569 !important;
+  margin-top: 0 !important;
+  margin-bottom: 36px !important; /* Generates beautiful space before contact area */
+  max-width: 320px !important;
+}
+
+/* 4. Complete spacing inside and around the contact block area */
+.footer-contact-box {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 18px !important; /* Perfectly opens the space between text and the button */
+  width: 100% !important;
+  margin-top: 0 !important;
+}
+
+/* Reset heading margins so they don't break flex gap consistency */
+.contact-heading {
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
+  font-weight: 700 !important;
+  color: #0a2558 !important;
+  margin: 0 !important; /* Removes implicit browser header margins */
+  max-width: 290px !important;
+}
+
+/* Interactive WhatsApp Button Layout */
+.phone-button {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  background-color: #0046ae !important; /* Solid premium button base */
+  color: #ffffff !important;
+  padding: 12px 24px !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  transition: background-color 0.2s ease, transform 0.2s ease !important;
+  margin: 0 !important;
+}
+
+.phone-button:hover {
+  background-color: #00338d !important;
+  transform: translateY(-1px) !important;
 }

@@ -307,3 +307,232 @@
     max-width: 300px; /* But don't let them get too huge */
   }
 }
+
+
+
+/* ================= HERO WRAPPER ================= */
+
+section.hero-section {
+  position: relative !important;
+  /* Premium, dark glowing midnight-navy radial gradient */
+  background: radial-gradient(circle at 50% 90%, #002244 0%, #000c1e 100%) !important;
+  color: #ffffff !important;
+  padding: 105px 24px 95px 24px !important; /* Balanced standard vertical padding */
+  text-align: center !important;
+  overflow: hidden !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  width: 100% !important;
+  display: block !important;
+}
+
+section.hero-section .hero-inner {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  position: relative !important;
+  z-index: 1 !important;
+  display: block !important;
+}
+
+section.hero-section .hero-copy {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+/* ================= PILL BADGE LABEL ================= */
+
+section.hero-section .hero-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important; /* Space between dot and text */
+  padding: 6px 14px !important;
+  background-color: rgba(56, 189, 248, 0.08) !important; /* Soft sky-blue background tint */
+  border: 1px solid rgba(56, 189, 248, 0.25) !important; /* Muted border edge */
+  border-radius: 9999px !important; /* Pill shape */
+  margin-bottom: 28px !important;
+}
+
+section.hero-section .hero-badge-dot {
+  width: 8px !important;
+  height: 8px !important;
+  background-color: #38bdf8 !important; /* Active sky-blue color */
+  border-radius: 50% !important;
+  display: inline-block !important;
+  position: relative !important;
+}
+
+/* Glowing outer pulse ring */
+section.hero-section .hero-badge-dot::after {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 50% !important;
+  background-color: #38bdf8 !important;
+  animation: heroBadgePulse 2s infinite ease-in-out !important;
+}
+
+section.hero-section .hero-badge-text {
+  color: #38bdf8 !important;
+  font-size: 0.825rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  line-height: 1 !important;
+}
+
+/* ================= TYPOGRAPHY ================= */
+
+/* Massive, tight-lettering header styling */
+section.hero-section .hero-main-title {
+  font-size: 64px !important; /* Solid desktop heading size */
+  font-weight: 800 !important; /* Extra bold */
+  line-height: 1.15 !important; /* Tight line height */
+  color: #ffffff !important; /* Forces white text so it is visible */
+  margin-bottom: 28px !important;
+  letter-spacing: -0.03em !important; /* Tight letter spacing */
+  margin-top: 0 !important;
+}
+
+/* Sky-Blue Accent Text */
+section.hero-section .text-highlight {
+  color: #38bdf8 !important; /* Sky Blue accent */
+  background-color: transparent !important;
+  display: inline !important;
+}
+
+/* Supporting Hero Text */
+section.hero-section .hero-description {
+  font-size: 1.15rem !important;
+  line-height: 1.65 !important;
+  color: rgba(255, 255, 255, 0.85) !important; /* Premium soft white */
+  max-width: 800px !important;
+  margin: 0 auto 36px auto !important;
+  display: block !important;
+}
+
+/* ================= CTA BUTTONS ================= */
+
+section.hero-section .hero-actions {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 16px !important;
+  margin-bottom: 0 !important;
+  flex-wrap: wrap !important;
+}
+
+/* Primary Button (Solid Sky Blue with Dark Navy text) */
+section.hero-section .hero-contact-btn {
+  display: inline-block !important;
+  background-color: #38bdf8 !important;
+  color: #001f3f !important; /* Force high-contrast text color */
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  padding: 14px 28px !important;
+  border-radius: 10px !important;
+  border: none !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  transition: background-color 0.2s ease, transform 0.2s ease !important;
+}
+
+section.hero-section .hero-contact-btn:hover {
+  background-color: #25aff2 !important;
+}
+
+/* Secondary Button (Outlined) */
+section.hero-section .hero-secondary-btn {
+  display: inline-block !important;
+  background-color: transparent !important;
+  color: #ffffff !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  padding: 14px 28px !important;
+  border: 1.5px solid rgba(73, 188, 244, 0.5) !important; /* Semi-transparent blue border */
+  border-radius: 10px !important;
+  text-decoration: none !important;
+  transition: border-color 0.2s ease, background-color 0.2s ease !important;
+}
+
+section.hero-section .hero-secondary-btn:hover {
+  border-color: #38bdf8 !important;
+  background-color: rgba(56, 189, 248, 0.08) !important;
+}
+
+/* Animated downward arrow symbol */
+section.hero-section .hero-secondary-btn .arrow {
+  display: inline-block !important;
+  transition: transform 0.2s ease !important;
+}
+
+section.hero-section .hero-secondary-btn:hover .arrow {
+  transform: translateY(2px) !important; /* Moves down on hover matching downward arrow symbol direction */
+}
+
+/* ================= MEDIA QUERIES ================= */
+
+@keyframes heroBadgePulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  section.hero-section .hero-main-title {
+    font-size: 48px !important; /* Balanced tablet size */
+  }
+}
+
+@media (max-width: 640px) {
+  section.hero-section .hero-main-title {
+    font-size: 36px !important; /* Legible mobile size */
+    line-height: 1.2 !important;
+  }
+}
+
+
+
+/* ================= TYPOGRAPHY SPACING ADJUSTMENTS ================= */
+
+/* Decreases space between the top badge and the heading */
+section.hero-section .hero-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 6px 14px !important;
+  background-color: rgba(56, 189, 248, 0.08) !important;
+  border: 1px solid rgba(56, 189, 248, 0.25) !important;
+  border-radius: 9999px !important;
+  margin-bottom: 18px !important; /* Reduced from 28px to pull heading closer */
+}
+
+/* Decreases space between the heading and the description */
+section.hero-section .hero-main-title {
+  font-size: 64px !important;
+  font-weight: 800 !important;
+  line-height: 1.15 !important;
+  color: #ffffff !important;
+  margin-bottom: 16px !important; /* Reduced from 28px to close the gap */
+  letter-spacing: -0.03em !important;
+  margin-top: 0 !important;
+  text-align: center !important;
+}
+
+/* Decreases space between the description and the buttons */
+section.hero-section .hero-description {
+  font-size: 1.15rem !important;
+  line-height: 1.65 !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  max-width: 800px !important;
+  margin: 0 auto 24px auto !important; /* Reduced bottom margin from 36px to 24px */
+  text-align: center !important;
+  display: block !important;
+}

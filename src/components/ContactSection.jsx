@@ -57,7 +57,7 @@ const ContactSection = () => {
     <section className="contact-section">
       <div className="contact-container">
         
-        {/* Left Side Content Container */}
+        {/* Left Side Content Container - 50% Width */}
         <div className="contact-left">
           <div className="left-inner-wrapper">
             <span className="contact-badge">
@@ -94,7 +94,7 @@ const ContactSection = () => {
           </div>
         </div>
 
-        {/* Right Side Card Container */}
+        {/* Right Side Card Container - 50% Width & Auto-Stretched */}
         <div className="contact-right">
           <div className="form-card">
             <h3 className="form-title">Send Us a Message</h3>

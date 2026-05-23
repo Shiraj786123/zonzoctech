@@ -43,72 +43,106 @@ const ContactPage = () => {
   return (
     <div className="cp__wrapper">
       <Navbar />
-      <Breadcrumb />
 
       {/* 1. HERO SECTION - CENTERED */}
       <section className="cp__bar_hero">
         <div className="cp__container">
-          <h1 className="cp__heading">Let's Build Something <span className="text_light_blue">Great Together</span></h1>
-          <p className="cp__hero_text_white">Whether you need a new website, an SEO strategy, AI automation or a full digital growth plan.</p>
+          {/* Renders the updated 2-step 'Home › Contact Info' breadcrumb over the navy gradient */}
+          <Breadcrumb />
+
+          <h1 className="cp__heading">
+            Let's Build Something <span className="text_light_blue">Great Together</span>
+          </h1>
+          <p className="cp__hero_text_white">
+            Whether you need a new website, an SEO strategy, AI automation or a full digital growth plan.
+          </p>
         </div>
       </section>
 
       {/* 2. CONTACT BUTTONS */}
-      <section className="cp__bar_info">
+      {/* ================= CONTACT & INFO SECTION ================= */}
+      <section className="cp__contact_section grey_bar">
         <div className="cp__container">
-          <div className="cp__button_row">
-            <a href="mailto:info@zonzoctech.com" className="cp__btn_card">
-              <span className="cp__card_icon">📩</span>
-              <div><h3>Email Us</h3><p>info@zonzoctech.com</p></div>
-            </a>
-            <a href="https://wa.me/94740309534" className="cp__btn_card">
-              <span className="cp__card_icon">💬</span>
-              <div><h3>WhatsApp</h3><p>+94 74 030 9534</p></div>
-            </a>
-            <div className="cp__btn_card no_hover">
-              <span className="cp__card_icon">🕒</span>
-              <div><h3>Working Hours</h3><p>Mon-Fri (9am-6pm)</p></div>
+          <div className="cp__contact_wrapper">
+            
+            {/* Left Column (2/3 Width) - Message Form Card */}
+            <div className="cp__form_box">
+              {isSuccess ? (
+                <div className="success_container">
+                  <div className="success_icon">🎉</div>
+                  <h2 className="cp__title_dark">Thank You!</h2>
+                  <p>We will get back to you within 24 hours.</p>
+                  <button onClick={handleResend} className="resend_btn">Send Another Message</button>
+                </div>
+              ) : (
+                <form className="cp__form_actual" onSubmit={handleSubmit}>
+                  <h2 className="cp__title_dark">Send Us a Message</h2>
+                  
+                  <div className="form_row">
+                    <input type="text" name="name" placeholder="Your Name*" value={formData.name} onChange={handleInputChange} required />
+                    <input type="email" name="email" placeholder="Email Address*" value={formData.email} onChange={handleInputChange} required />
+                  </div>
+                  
+                  <div className="form_row">
+                    <input type="text" name="company" placeholder="Company / Organization" value={formData.company} onChange={handleInputChange} />
+                    <input type="tel" name="phone" placeholder="Phone Number*" value={formData.phone} onChange={handleInputChange} required />
+                  </div>
+                  
+                  <select value={selectedService} onChange={(e) => setSelectedService(e.target.value)} required>
+                    <option value="">You are interested in...</option>
+                    <option value="AI Solutions">AI Solutions</option>
+                    <option value="Web Dev">Website Development</option>
+                  </select>
+                  
+                  <div className="budget_wrap">
+                    <label>Budget: ${budget.toLocaleString()}</label>
+                    <input 
+                      type="range" 
+                      min="5000" 
+                      max="65000" 
+                      step="500" 
+                      value={budget} 
+                      onChange={(e) => setBudget(Number(e.target.value))} 
+                      style={{ background: `linear-gradient(to right, #1296ec ${percentage}%, #ddd ${percentage}%)` }} 
+                    />
+                  </div>
+                  
+                  <textarea name="project" placeholder="Tell us about the project..." value={formData.project} onChange={handleInputChange} required></textarea>
+                  
+                  <button type="submit" className="submit_btn">
+                    {isSubmitting ? "SENDING..." : "SUBMIT PROJECT DETAILS →"}
+                  </button>
+                </form>
+              )}
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* 3. MESSAGE FORM (Image Structure) */}
-      <section className="cp__bar_form grey_bar">
-        <div className="cp__container">
-          <div className="cp__form_box">
-            {isSuccess ? (
-              <div className="success_container">
-                <div className="success_icon">🎉</div>
-                <h2 className="cp__title_dark">Thank You!</h2>
-                <p>We will get back to you within 24 hours.</p>
-                <button onClick={handleResend} className="resend_btn">Send Another Message</button>
+            {/* Right Column (1/3 Width) - Stretched Vertical Contact Buttons */}
+            <div className="cp__button_column">
+              <a href="mailto:info@zonzoctech.com" className="cp__btn_card">
+                <span className="cp__card_icon">📩</span>
+                <div className="cp__card_content">
+                  <h3>Email Us</h3>
+                  <p>info@zonzoctech.com</p>
+                </div>
+              </a>
+              
+              <a href="https://wa.me/94740309534" className="cp__btn_card">
+                <span className="cp__card_icon">💬</span>
+                <div className="cp__card_content">
+                  <h3>WhatsApp</h3>
+                  <p>+94 74 030 9534</p>
+                </div>
+              </a>
+              
+              <div className="cp__btn_card no_hover">
+                <span className="cp__card_icon">🕒</span>
+                <div className="cp__card_content">
+                  <h3>Working Hours</h3>
+                  <p>Mon-Fri (9am-6pm)</p>
+                </div>
               </div>
-            ) : (
-              <form className="cp__form_actual" onSubmit={handleSubmit}>
-                <h2 className="cp__title_dark">Send Us a Message</h2>
-                <div className="form_row">
-                  <input type="text" name="name" placeholder="Your Name*" value={formData.name} onChange={handleInputChange} required />
-                  <input type="email" name="email" placeholder="Email Address*" value={formData.email} onChange={handleInputChange} required />
-                </div>
-                <div className="form_row">
-                  <input type="text" name="company" placeholder="Company / Organization" value={formData.company} onChange={handleInputChange} />
-                  <input type="tel" name="phone" placeholder="Phone Number*" value={formData.phone} onChange={handleInputChange} required />
-                </div>
-                <select value={selectedService} onChange={(e) => setSelectedService(e.target.value)} required>
-                  <option value="">You are interested in...</option>
-                  <option value="AI Solutions">AI Solutions</option>
-                  <option value="Web Dev">Website Development</option>
-                </select>
-                <div className="budget_wrap">
-                  <label>Budget: ${budget.toLocaleString()}</label>
-                  <input type="range" min="5000" max="65000" step="500" value={budget} onChange={(e) => setBudget(Number(e.target.value))} 
-                  style={{ background: `linear-gradient(to right, #00448f ${percentage}%, #ddd ${percentage}%)` }} />
-                </div>
-                <textarea name="project" placeholder="Tell us about the project..." value={formData.project} onChange={handleInputChange} required></textarea>
-                <button type="submit" className="submit_btn">{isSubmitting ? "SENDING..." : "SUBMIT PROJECT DETAILS →"}</button>
-              </form>
-            )}
+            </div>
+
           </div>
         </div>
       </section>

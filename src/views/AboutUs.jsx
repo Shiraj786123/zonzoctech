@@ -2,8 +2,8 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Breadcrumb from "../components/Breadcrumb";
 import "../styles/AboutUs.css";
+import Breadcrumb from "../components/Breadcrumb";
 
 const AboutUs = () => {
   const stats = [
@@ -56,11 +56,13 @@ const AboutUs = () => {
   return (
     <div className="abt__wrapper">
       <Navbar />
-      <Breadcrumb />
 
       {/* 1. HERO SECTION - High Contrast (White/Light Blue) */}
       <section className="abt__bar_hero">
         <div className="abt__container">
+          {/* MOVED BREADCRUMB HERE: Renders inside the dark container above the title */}
+          <Breadcrumb />
+
           <h1 className="abt__heading">We Build Digital Systems That <span className="text_light_blue">Generate Real Growth</span></h1>
           <p className="abt__hero_text_white">ZonzocTech is an AI-powered agency helping UK and USA businesses scale with high-converting websites at a fraction of local agency prices.</p>
         </div>
@@ -176,7 +178,7 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* 8. FINAL CTA (Exact Image Match) */}
+      {/* 8. FINAL CTA */}
       <section className="abt__cta_image_style">
         <div className="abt__container">
           <div className="abt__cta_content_box">

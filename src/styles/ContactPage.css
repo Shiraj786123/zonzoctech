@@ -82,3 +82,404 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 20px;
   .cp__grid_4 { grid-template-columns: 1fr; }
   .cp__form_box { padding: 25px 20px; }
 }
+
+
+
+
+/* ================= HERO WRAPPER ================= */
+
+section.cp__bar_hero {
+  position: relative !important;
+  /* Premium, dark glowing midnight-navy radial gradient */
+  background: radial-gradient(circle at 50% 90%, #002244 0%, #000c1e 100%) !important;
+  color: #ffffff !important;
+  /* Increased vertical padding to make the section tall and spacious */
+  padding: 105px 24px 95px 24px !important; 
+  text-align: center !important;
+  overflow: hidden !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  width: 100% !important;
+  display: block !important;
+}
+
+/* Scopes container styling to the hero to prevent other sections from shrinking */
+section.cp__bar_hero .cp__container {
+  width: 100% !important;
+  max-width: 1200px !important; /* Stretches the text wider horizontally */
+  margin: 0 auto !important;
+  position: relative !important;
+  z-index: 1 !important;
+  display: block !important;
+}
+
+/* ================= TYPOGRAPHY ================= */
+
+/* Massive, tight-lettering header styling */
+section.cp__bar_hero .cp__heading {
+  font-size: 64px !important; /* Solid, bold desktop heading size */
+  font-weight: 800 !important; /* Extra bold */
+  line-height: 1.15 !important; /* Tight line height */
+  color: #ffffff !important;
+  margin-bottom: 24px !important;
+  letter-spacing: -0.03em !important; /* Tight letter spacing */
+  margin-top: 0 !important;
+}
+
+/* Sky-Blue Accent Text */
+section.cp__bar_hero .text_light_blue {
+  color: #38bdf8 !important; /* Sky Blue accent color */
+  background-color: transparent !important;
+  display: inline !important;
+}
+
+/* Supporting Hero Text */
+section.cp__bar_hero .cp__hero_text_white {
+  font-size: 1.15rem !important;
+  line-height: 1.65 !important;
+  color: rgba(255, 255, 255, 0.85) !important; /* Premium soft white text */
+  max-width: 800px !important;
+  margin: 0 auto !important;
+  display: block !important;
+}
+
+/* ================= RESPONSIVE HEADER SIZES ================= */
+
+@media (max-width: 1024px) {
+  section.cp__bar_hero .cp__heading {
+    font-size: 48px !important; /* Balanced tablet size */
+  }
+}
+
+@media (max-width: 640px) {
+  section.cp__bar_hero .cp__heading {
+    font-size: 36px !important; /* Legible mobile size */
+    line-height: 1.2 !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* ================= CONTAINERS & HORIZONTAL SPLIT ================= */
+
+section.cp__contact_section.grey_bar {
+  background-color: #f8fafc !important; /* Soft premium off-white/light-gray background */
+  padding: 80px 24px !important;
+  width: 100% !important;
+  display: block !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+/* Stretches the overall width of the section to close the middle gap */
+section.cp__contact_section .cp__container {
+  width: 100% !important;
+  max-width: 1280px !important; /* Increased width to stretch wider across the page */
+  margin: 0 auto !important;
+  position: relative !important;
+  z-index: 1 !important;
+  display: block !important;
+}
+
+section.cp__contact_section .cp__contact_wrapper {
+  display: grid !important;
+  grid-template-columns: 2fr 1fr !important; /* 2/3 Left, 1/3 Right ratio */
+  gap: 24px !important; /* Narrower column gap to bring the columns closer together */
+  align-items: stretch !important; /* Forces form card and button column to match heights */
+  width: 100% !important;
+}
+
+/* ================= LEFT COLUMN: MESSAGE FORM CARD ================= */
+
+/* ================= LEFT COLUMN: MESSAGE FORM CARD ================= */
+
+section.cp__contact_section .cp__form_box {
+  background-color: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 16px !important;
+  padding: 40px !important;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.015) !important;
+  box-sizing: border-box !important;
+  
+  /* CRITICAL: Overrides default constraints to stretch the card to the yellow lines */
+  width: 100% !important;
+  max-width: 100% !important; 
+}
+
+section.cp__contact_section .cp__form_actual {
+  display: flex !important;
+  flex-direction: column !important;
+  
+  /* Overrides any nested container width restrictions */
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+section.cp__contact_section .cp__title_dark {
+  font-size: 1.75rem !important;
+  font-weight: 800 !important;
+  color: #000080 !important; /* Classic navy blue title */
+  margin-top: 0 !important;
+  margin-bottom: 28px !important;
+  letter-spacing: -0.01em !important;
+  text-align: left !important;
+}
+
+/* Double-input row layout */
+section.cp__contact_section .form_row {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 16px !important;
+  margin-bottom: 16px !important;
+}
+
+/* Form inputs & fields */
+section.cp__contact_section input,
+section.cp__contact_section select,
+section.cp__contact_section textarea {
+  width: 100% !important;
+  padding: 14px 16px !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 10px !important;
+  background-color: #ffffff !important;
+  outline: none !important;
+  font-size: 0.95rem !important;
+  color: #000080 !important; /* Classic navy text input */
+  box-sizing: border-box !important;
+  font-family: inherit !important;
+}
+
+section.cp__contact_section input:focus,
+section.cp__contact_section select:focus,
+section.cp__contact_section textarea:focus {
+  border-color: #1296ec !important; /* Highlighted brand-blue border on focus */
+}
+
+section.cp__contact_section select {
+  margin-bottom: 16px !important;
+  cursor: pointer !important;
+}
+
+/* Budget Range Slider */
+section.cp__contact_section .budget_wrap {
+  display: flex !important;
+  flex-direction: column !important;
+  margin-bottom: 20px !important;
+  text-align: left !important;
+}
+
+section.cp__contact_section .budget_wrap label {
+  font-size: 0.9rem !important;
+  font-weight: 700 !important;
+  color: #64748b !important;
+  margin-bottom: 8px !important;
+}
+
+section.cp__contact_section .budget_wrap input[type="range"] {
+  padding: 0 !important;
+  height: 6px !important;
+  border: none !important;
+  outline: none !important;
+  border-radius: 3px !important;
+  cursor: pointer !important;
+}
+
+section.cp__contact_section textarea {
+  resize: none !important;
+  min-height: 120px !important;
+  margin-bottom: 24px !important;
+}
+
+/* Form Submit Button (Classic Navy Blue) */
+section.cp__contact_section .submit_btn {
+  width: 100% !important;
+  background-color: #000080 !important; /* Classic navy blue background */
+  color: #ffffff !important; /* White text */
+  border: none !important;
+  padding: 16px !important;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  border-radius: 10px !important;
+  cursor: pointer !important;
+  transition: background-color 0.2s ease !important;
+}
+
+section.cp__contact_section .submit_btn:hover {
+  background-color: #000066 !important; /* Deeper navy blue on hover */
+}
+
+/* ================= RIGHT COLUMN: CENTERED CONTACT BUTTONS ================= */
+
+section.cp__contact_section .cp__button_column {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important; /* Separates the cards */
+  height: 100% !important; /* Matches form height */
+}
+
+/* Contact Cards styled as centered vertical blocks */
+section.cp__contact_section .cp__btn_card {
+  flex: 1 !important; /* Forces all 3 cards to split the column height equally */
+  background-color: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 12px !important;
+  padding: 24px !important;
+  
+  /* Flex Centering: Positions icon on top, text centered below */
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  
+  text-decoration: none !important;
+  color: inherit !important;
+  box-sizing: border-box !important;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.015) !important;
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Hover border-glow and lift */
+section.cp__contact_section .cp__btn_card:not(.no_hover):hover {
+  transform: translateY(-3px) !important;
+  border-color: #1296ec !important; /* Soft blue border glow */
+  box-shadow: 0 8px 16px rgba(18, 150, 236, 0.05) !important;
+}
+
+/* Centered Icon Badge */
+section.cp__contact_section .cp__card_icon {
+  width: 46px !important;
+  height: 46px !important;
+  border-radius: 50% !important;
+  background-color: rgba(18, 150, 236, 0.08) !important; /* Soft blue background */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1.35rem !important;
+  margin-bottom: 14px !important; /* Space between icon and text */
+  flex-shrink: 0 !important;
+}
+
+/* Centered Typography layout */
+section.cp__contact_section .cp__card_content {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+section.cp__contact_section .cp__card_content h3 {
+  margin: 0 !important;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  color: #1e293b !important; /* Slate-800 */
+  margin-bottom: 6px !important;
+  text-transform: uppercase !important; /* Uppercase matching screenshot */
+  letter-spacing: 0.06em !important;
+}
+
+section.cp__contact_section .cp__card_content p {
+  margin: 0 !important;
+  font-size: 0.9rem !important;
+  color: #64748b !important; /* Slate-500 */
+}
+
+/* Static badge state for Working Hours */
+section.cp__contact_section .cp__btn_card.no_hover {
+  cursor: default !important;
+}
+
+/* Success Form Alerts */
+.success_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+.success_icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+.resend_btn {
+  background-color: #000080;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  margin-top: 20px;
+  transition: background-color 0.2s;
+}
+.resend_btn:hover {
+  background-color: #000066;
+}
+
+/* ================= MEDIA QUERIES ================= */
+
+@media (max-width: 900px) {
+  section.cp__contact_section .cp__contact_wrapper {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  
+  section.cp__contact_section .cp__btn_card {
+    flex: none !important;
+    padding: 20px !important;
+  }
+}
+
+@media (max-width: 580px) {
+  section.cp__contact_section .cp__form_box {
+    padding: 28px 20px !important;
+  }
+  section.cp__contact_section .form_row {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    margin-bottom: 0 !important;
+  }
+  section.cp__contact_section input {
+    margin-bottom: 16px !important;
+  }
+}
+
+
+
+
+/* ================= MOBILE RESPONSIVE MEDIA QUERIES ================= */
+
+/* Collapse the main layout into a single vertical column on all tablets & mobile devices */
+@media (max-width: 1120px) {
+  section.cp__contact_section .cp__contact_wrapper {
+    grid-template-columns: 1fr !important; /* Stacks the Form and the Buttons vertically */
+    gap: 32px !important;
+  }
+  
+  /* Disables the vertical stretch constraints in stacked layouts */
+  section.cp__contact_section .cp__btn_card {
+    flex: none !important; 
+    padding: 24px !important;
+  }
+}
+
+/* Force input fields to stack to a single column on mobile screens to prevent text cutting */
+@media (max-width: 680px) {
+  section.cp__contact_section .cp__form_box {
+    padding: 28px 20px !important; /* Tighter inside padding for mobile screens */
+  }
+  
+  section.cp__contact_section .form_row {
+    grid-template-columns: 1fr !important; /* Stacks inputs vertically (Your Name on top of Email) */
+    gap: 16px !important;
+    margin-bottom: 0 !important;
+  }
+  
+  section.cp__contact_section input {
+    margin-bottom: 16px !important; /* Adds clear spacing between stacked inputs */
+  }
+}
+
