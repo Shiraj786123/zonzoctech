@@ -38,11 +38,13 @@ export const metadata = {
     'ZonzocTech builds high-converting websites, drives targeted traffic, and automates businesses with AI. Serving UK and US clients.',
   metadataBase: new URL('https://zonzoctech.com'),
   icons: {
-    icon: '/zonzotech-favicon.png', 
+    icon: '/zonzotech-faviconnew1.png?v=2', 
+    shortcut: '/zonzotech-faviconnew1.png?v=2', // Added to support older browsers & pin layouts
+    apple: '/zonzotech-faviconnew1.png?v=2',    // Added to support iOS bookmarks
   },
   openGraph: {
     siteName: 'ZonzocTech',
-    images: [{ url: '/zonzotech-favicon.png' }],
+    images: [{ url: '/zonzotech-faviconnew1.png?v=2' }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -54,7 +56,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${inter.variable} ${syne.variable} ${dmSans.variable}`}>
       <head>
         {/* Next.js automatically handles link preconnect and stylesheet optimization */}
-        <link rel="icon" href="/zonzotech-favicon.png?v=2" type="image/png" />
+        <link rel="icon" href="/zonzotech-faviconnew1.png?v=2" type="image/png" />
       </head>
       <body>
         <AuthProvider>
