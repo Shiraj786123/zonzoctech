@@ -1,11 +1,4 @@
 
-
-
-
-
-
-
-
 /* ==========================================================================
    Global Mobile Baseline & Layout Styles
    ========================================================================== */
@@ -129,11 +122,12 @@
 }
 
 .dashboard-main-img {
-  width: 100%;
-  height: auto;
+  width: 140%;
+  height: auto;;
   border-radius: 8px;
   display: block;
 }
+
 
 /* Floating Component Widget Card */
 .top-rated-floating-widget {
@@ -403,61 +397,45 @@
 
 
 
-@media (min-width: 1025px) {
 
-  /* 1. Group items closely from the top, allowing individual growth configs */
+
+
+
+
+
+
+@media (min-width: 1025px) {
+  /* Ensure the parent column doesn't squeeze the visual side */
   .why-us-right {
-    flex: 1.15;            
+    flex: 1.15;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Fixes the large awkward gap between the blocks */
-    gap: 24px;                  
+    gap: 24px;
+    min-width: 0; 
   }
 
-  /* 2. ELEGANT SOLUTION: Make the image visual canvas absorb the extra layout height dynamically */
+  /* Force the canvas to maintain its footprint */
   .dashboard-visual-canvas {
-    flex-grow: 1;               /* Tells this container to fill the empty top space beautifully */
+    flex-shrink: 0;      /* Prevents the image area from shrinking */
+    flex-grow: 1;        /* Allows it to fill vertical space if needed */
     display: flex;
-    align-items: center;        /* Centers the dashboard image container vertically */
+    align-items: center;
     justify-content: center;
-    padding: 32px;  
+    padding: 32px;
     background-color: #f8fafc;
     border: 1px solid #e2e8f0;
     border-radius: 16px;
-    min-height: 340px;          /* Assures a prominent visual footprint */
+    min-height: 400px;   /* Sets a firm visual size */
+    position: relative;
   }
 
-  /* Ensure the main image scales gracefully within its expanded frame */
+  /* Ensure the image fills the canvas without distortion */
   .dashboard-main-img {
     width: 100%;
     height: 100%;
-    object-fit: contain;        /* Keeps your aspect ratio completely intact without stretching */
-    max-height: 380px;
-  }
-
-  /* 3. Keep the panel cohesive, matching the exact baseline of the left timeline element */
-  .analytics-metrics-panel {
-    padding: 32px;       
-    flex-grow: 0;               /* Keeps numbers and commitments tucked tightly together */
-    display: flex;
-    flex-direction: column;
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 16px;
-  }
-
-  /* 4. Natural snug grid padding inside the lower module */
-  .stats-quad-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin-bottom: 24px;       /* Controlled layout gap before corporate line rules begin */
-  }
-
-  .business-commitments-grid {
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 16px;
-    padding-top: 24px;
-    border-top: 1px solid #f1f5f9;
+    /* 'contain' keeps the full graphic visible inside the border */
+    /* 'cover' fills the space but might crop edges if aspect ratios differ */
+    object-fit: contain; 
+    display: block;
   }
 }
