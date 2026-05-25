@@ -22,20 +22,29 @@
   width: 100%;
 }
 
+
 .topbar-inner {
-  max-width: 1200px;
+  max-width: 1440px; /* Matches navbar max-width */
+  width: 100%;
   margin: 0 auto;
-  padding: 8px 24px;
-  display: flex;
-  justify-content: space-between;
+  /* 24px padding aligns exactly with the logo in your navbar-inner */
+  padding: 8px 24px; 
+  display: flex !important;
+  justify-content: space-between !important;
   align-items: center;
-  gap: 16px;
+  box-sizing: border-box;
 }
 
-.topbar-left {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px; /* Adds space between the globe icon and your text */
+
+
+.topbar-left { 
+  display: flex; 
+  align-items: center; 
+  gap: 8px;
+  
+  /* Use this to pull the text away from the very edge of the screen */
+  /* Increase or decrease this number until it aligns perfectly with your logo */
+  padding-left: 40px; 
 }
 
 /* Keeps the globe icon inline and vertically centered with the text line */
@@ -177,4 +186,22 @@
 /* Force the FontAwesome SVG icons to ignore click hits, passing them directly to the <a> tag */
 .topbar-link svg {
   pointer-events: none !important;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  .topbar-inner {
+    /* This overrides the desktop space-between to center the content */
+    justify-content: center !important; 
+    gap: 15px; /* Adds a small space between the text and the icons on mobile */
+    padding: 8px 16px;
+  }
+
+  /* Optional: Hide the text on very small screens if it gets too crowded */
+  @media (max-width: 480px) {
+    .topbar-left span { font-size: 10px; }
+  }
 }
