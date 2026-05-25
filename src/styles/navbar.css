@@ -1,3 +1,5 @@
+
+
 /* ==========================================================================
    GLOBAL RESET
    ========================================================================== */
@@ -34,8 +36,11 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
+/* ==========================================================================
+   NAVBAR CONTAINER ADJUSTMENTS (INCREASE MAX WIDTH BOUNDS)
+   ========================================================================== */
 .navbar-inner {
-  max-width: 1200px;
+  max-width: 1440px;          /* UPDATED from 1200px to expand layout edge-to-edge */
   width: 100%;
   margin: 0 auto;
   padding: 0 24px;
@@ -50,7 +55,7 @@
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  margin-left:24px;
+  margin-left: 40px;           /* UPDATED from 24px to flush the logo further left */
 }
 
 .navbar-logo img {
@@ -565,3 +570,39 @@
   transform: translateZ(0);
   backface-visibility: hidden;
 }
+
+
+
+
+
+
+
+
+
+@media (max-width: 1024px) {
+  
+  /* 1. Remove the background from the link itself */
+  .mobile-navbar-home {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important; /* Clear extra box offsets */
+  }
+
+  /* 2. Target the outer structural parent container to clear the wrapper box */
+  .navbar-mobile-controls div, 
+  .navbar-mobile-controls span,
+  [class*="home-wrapper"], 
+  [class*="home-container"] {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+  
+}
+
+
+
+

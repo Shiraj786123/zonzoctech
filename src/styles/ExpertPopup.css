@@ -1,5 +1,5 @@
 /* ==========================================================================
-   PREMIUM WHITE & SKY BLUE POPUP MODULE
+   PREMIUM WHITE & BRAND NAVY POPUP MODULE
    ========================================================================== */
 
 /* Overlay */
@@ -22,8 +22,8 @@
 .popup-container {
   width: 100% !important;
   max-width: 980px !important;
-  background: #ffffff !important; /* UPDATED: Clean White Canvas Background */
-  border: 1px solid rgba(56, 189, 248, 0.4) !important; /* Enhanced Sky Blue Frame Contrast */
+  background: #ffffff !important; /* Clean White Canvas Background */
+  border: 1px solid rgba(0, 51, 107, 0.3) !important; /* UPDATED: Brand Navy Frame Border */
   border-radius: 18px !important;
   display: grid !important;
   grid-template-columns: 1fr 1.4fr !important;
@@ -59,7 +59,7 @@
 }
 
 .popup-close:hover {
-  color: #38bdf8 !important;
+  color: #00336b !important; /* UPDATED: Brand Navy close hover effect */
 }
 
 /* LEFT PANEL (Light Gray to White Subtle Gradient) */
@@ -70,7 +70,7 @@
   display: flex !important;
   flex-direction: column !important;
   justify-content: space-between !important;
-  border-right: 1px solid rgba(56, 189, 248, 0.2) !important;
+  border-right: 1px solid rgba(0, 51, 107, 0.15) !important; /* UPDATED: Brand Navy structural divider */
 }
 
 .popup-left-top {
@@ -80,7 +80,7 @@
 .popup-left h3 {
   font-size: 22px !important;
   margin-bottom: 8px !important;
-  color: #0f172a !important; /* Dark Heading text */
+  color: #00336b !important; /* UPDATED: "Speak to Our Experts" Heading Text */
 }
 
 .popup-left p {
@@ -92,8 +92,8 @@
 /* Review Block Container */
 .popup-review {
   margin: 28px 0 !important;
-  background: rgba(56, 189, 248, 0.08) !important; /* Kept premium sky blue soft glass tint */
-  border: 1px solid rgba(56, 189, 248, 0.25) !important;
+  background: rgba(0, 51, 107, 0.05) !important; /* UPDATED: Light tint background variant for review panel */
+  border: 1px solid rgba(0, 51, 107, 0.15) !important; /* UPDATED: Thin Navy boundary track line */
   padding: 16px !important;
   border-radius: 10px !important;
   font-size: 13px !important;
@@ -104,7 +104,7 @@
   display: block !important;
   margin-bottom: 6px !important;
   font-size: 14px !important;
-  color: #0284c7 !important; /* Richer Sky Blue variant for high text readability over light layers */
+  color: #00336b !important; /* UPDATED: Bold review text color */
 }
 
 /* Social Media/Contact Icons */
@@ -116,7 +116,7 @@
   margin-right: 12px !important;
   font-size: 20px !important;
   cursor: pointer !important;
-  color: #38bdf8 !important;
+  color: #00336b !important; /* UPDATED: Left column social links color */
   transition: all 0.3s !important;
 }
 
@@ -129,7 +129,7 @@
 .popup-contact {
   margin-top: auto !important;
   padding-top: 20px !important;
-  border-top: 1px solid rgba(56, 189, 248, 0.2) !important;
+  border-top: 1px solid rgba(0, 51, 107, 0.15) !important; /* UPDATED: Structural border */
 }
 
 .popup-contact span {
@@ -144,19 +144,19 @@
   margin-right: 10px !important;
   font-size: 16px !important;
   min-width: 18px !important;
-  color: #38bdf8 !important;
+  color: #00336b !important; /* UPDATED: Left column icons tint */
 }
 
 /* RIGHT PANEL (Main Form Region) */
 .popup-right {
   padding: 36px !important;
-  background: #ffffff !important; /* UPDATED: Pure White Form Background Panel */
+  background: #ffffff !important; /* Pure White Form Background Panel */
 }
 
 .popup-right h2 {
   font-size: 26px !important;
   margin-bottom: 8px !important;
-  color: #0f172a !important;
+  color: #00336b !important; /* UPDATED: "Let's Build Something Incredible Together" Form Title */
 }
 
 .popup-subtext {
@@ -173,7 +173,7 @@
   padding: 12px 14px !important;
   border-radius: 8px !important;
   background: #f8fafc !important; /* Soft white-gray input canvas beds */
-  border: 1px solid rgba(56, 189, 248, 0.3) !important;
+  border: 1px solid rgba(0, 51, 107, 0.15) !important; /* UPDATED: Input borders */
   color: #0f172a !important; /* Input text changes to dark navy/slate */
   font-size: 14px !important;
   margin-bottom: 14px !important;
@@ -189,9 +189,9 @@
 .popup-form input:focus,
 .popup-form select:focus,
 .popup-form textarea:focus {
-  border-color: #38bdf8 !important;
+  border-color: #00336b !important; /* UPDATED: Input focus outline border color */
   background: #ffffff !important; /* Glows to plain white when actively selected */
-  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2) !important;
+  box-shadow: 0 0 0 3px rgba(0, 51, 107, 0.1) !important; /* UPDATED: Soft navy outer glow ring */
 }
 
 /* Option element overrides inside browser select */
@@ -216,8 +216,8 @@
   font-size: 13px !important;
   margin: 10px 0 6px !important;
   display: block !important;
-  color: #0284c7 !important; /* Bright distinct deep Sky Blue tracking labels */
-  font-weight: 500 !important;
+  color: #00336b !important; /* UPDATED: "Estimated Budget (USD):" Tracker Text color */
+  font-weight: 600 !important;
 }
 
 /* Premium Range Bar Slider UI */
@@ -228,7 +228,7 @@ input[type="range"] {
   height: 6px !important;
   border-radius: 5px !important;
   background: #e2e8f0 !important; /* Light tracking track channel line */
-  border: 1px solid rgba(56, 189, 248, 0.2) !important;
+  border: 1px solid rgba(0, 51, 107, 0.1) !important;
   outline: none !important;
   margin-bottom: 16px !important;
 }
@@ -240,10 +240,10 @@ input[type="range"]::-webkit-slider-thumb {
   width: 20px !important;
   height: 20px !important;
   border-radius: 100% !important;
-  background: #38bdf8 !important;
+  background: #00336b !important; /* UPDATED: Blue Slideline handle node */
   cursor: pointer !important;
   border: 2px solid #ffffff !important;
-  box-shadow: 0 2px 6px rgba(56, 189, 248, 0.4) !important;
+  box-shadow: 0 2px 6px rgba(0, 51, 107, 0.3) !important;
   transition: transform 0.1s !important;
 }
 
@@ -256,10 +256,10 @@ input[type="range"]::-moz-range-thumb {
   width: 20px !important;
   height: 20px !important;
   border-radius: 100% !important;
-  background: #38bdf8 !important;
+  background: #00336b !important; /* UPDATED: Firefox Slider handle point */
   cursor: pointer !important;
   border: 2px solid #ffffff !important;
-  box-shadow: 0 2px 6px rgba(56, 189, 248, 0.4) !important;
+  box-shadow: 0 2px 6px rgba(0, 51, 107, 0.3) !important;
   transition: transform 0.1s !important;
 }
 
@@ -298,16 +298,16 @@ input[type="range"]::-moz-range-thumb:hover {
 
 /* Submit Form Interactive Button */
 .popup-actions .submit-btn {
-  background-color: #38bdf8 !important;
+  background-color: #00336b !important; /* UPDATED: Brand Dark Navy color block for Submit Button */
   color: #ffffff !important; /* White contrast typography inside submission CTA node */
   border: none !important;
-  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3) !important;
+  box-shadow: 0 4px 12px rgba(0, 51, 107, 0.25) !important;
 }
 
 .popup-actions .submit-btn:hover {
-  background-color: #0ea5e9 !important;
+  background-color: #002247 !important; /* Slightly darker shift for cleaner hover definition */
   transform: translateY(-2px) !important;
-  box-shadow: 0 6px 16px rgba(56, 189, 248, 0.45) !important;
+  box-shadow: 0 6px 16px rgba(0, 51, 107, 0.35) !important;
 }
 
 /* Cancel Action Button styles */
@@ -388,7 +388,7 @@ input[type="range"]::-moz-range-thumb:hover {
     padding: 24px !important;
     min-height: auto !important;
     border-right: none !important;
-    border-bottom: 1px solid rgba(56, 189, 248, 0.2) !important;
+    border-bottom: 1px solid rgba(0, 51, 107, 0.15) !important;
   }
 
   .popup-right {
@@ -415,5 +415,55 @@ input[type="range"]::-moz-range-thumb:hover {
     height: 50px !important;
     justify-content: center !important;
     text-align: center !important;
+  }
+}
+
+
+
+
+
+
+
+
+/* RESPONSIVE MOBILE HANDSET LAYOUT CONFIGURATIONS */
+@media (max-width: 768px) {
+  
+  /* ... keep your other layout properties the same ... */
+
+  /* UPDATED: Clear layout behavior to stack buttons cleanly */
+  .popup-actions {
+    display: flex !important;
+    flex-direction: column !important; /* Stack buttons vertically */
+    align-items: center !important;    /* Center them horizontally */
+    justify-content: center !important;
+    gap: 12px !important;              /* Clean layout spacing gap */
+    margin-top: 24px !important;
+    width: 100% !important;
+  }
+
+  /* CRITICAL: Neutralize the desktop spacer so it doesn't push mobile buttons off-center */
+  .popup-actions::before {
+    display: none !important;
+    content: none !important;
+  }
+  
+  /* UPDATED: Forces both buttons to look uniform and stretch cleanly on mobile viewports */
+  .popup-actions button,
+  .popup-actions .submit-btn,
+  .popup-actions .cancel-btn {
+    width: 100% !important;            /* Make buttons span edge-to-edge inside the form padding */
+    max-width: 340px !important;       /* Prevents buttons from looking awkwardly wide on tablets */
+    min-width: unset !important;
+    height: 48px !important;           
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin: 0 auto !important;         /* Final fallback alignment center anchor */
+  }
+
+  /* Keep cancel button underneath submit button without extra spacing anomalies */
+  .popup-actions .cancel-btn {
+    margin-top: 0px !important;
   }
 }
