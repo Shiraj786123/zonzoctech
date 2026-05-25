@@ -178,3 +178,21 @@
     flex-wrap: wrap !important;
   }
 }
+
+
+
+
+
+/* Style for the non-link "Services" breadcrumb */
+.no-link {
+    cursor: default !important;   /* Keeps the arrow cursor */
+    text-decoration: none !important;
+    pointer-events: none;         /* Disables clickability */
+    color: inherit;               /* Keeps your standard text color */
+}
+
+/* Optional: Add a subtle hover effect if you want it to look interactive */
+.no-link:hover {
+    color: #00448f;               /* Change color on hover without it being a link */
+    transition: color 0.2s ease;
+}

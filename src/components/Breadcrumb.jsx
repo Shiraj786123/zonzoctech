@@ -5,13 +5,10 @@ import { usePathname } from "next/navigation";
 import "../styles/breadcrumb.css";
 
 const breadcrumbMap = {
-  /* Services Hub Page */
   "/services": [
     { name: "Home", link: "/" },
     { name: "Services" }
   ],
-  
-  /* Sub-Services (All mapping to /services as the second crumb) */
   "/ai-website-design-development": [
     { name: "Home", link: "/" },
     { name: "Services", link: "/services" },
@@ -42,29 +39,21 @@ const breadcrumbMap = {
     { name: "Services", link: "/services" },
     { name: "Website Maintenance & Security" }
   ],
-  
-  /* Parent SEO Page */
   "/seo-services": [
     { name: "Home", link: "/" },
     { name: "Services", link: "/services" },
     { name: "SEO Services" }
   ],
-  
-  /* Nested SEO Sub-Page */
   "/seo-ai-search-optimization": [
     { name: "Home", link: "/" },
     { name: "Services", link: "/services" },
     { name: "SEO Services", link: "/seo-services" },
     { name: "SEO & AI Search Optimization" }
   ],
-
-  /* Case Studies Hub Page */
   "/case-studies": [
     { name: "Home", link: "/" },
     { name: "Case Studies" }
   ],
-
-  /* Individual Case Studies (Explicit Mapping for Perfect Capitalization) */
   "/case-studies/vitamina-project": [
     { name: "Home", link: "/" },
     { name: "Case Studies", link: "/case-studies" },
@@ -95,8 +84,6 @@ const breadcrumbMap = {
     { name: "Case Studies", link: "/case-studies" },
     { name: "ASJ Hardscapes" }
   ],
-  
-  /* Utility Pages (Aligned with your schema.org structure) */
   "/about": [
     { name: "Home", link: "/" },
     { name: "About Us" }
@@ -120,7 +107,6 @@ const Breadcrumb = () => {
   
   let crumbs = breadcrumbMap[pathname];
   
-  // Dynamic fallback for any newly added case studies in the future
   if (!crumbs && pathname.startsWith('/case-studies/')) {
     const projectName = pathname.split('/').pop()
       .split('-')
@@ -141,8 +127,11 @@ const Breadcrumb = () => {
       <div className="breadcrumb-container">
         {crumbs.map((item, index) => (
           <React.Fragment key={index}>
-            {/* Logic: If it has a link and isn't the last item, show clickable link */}
-            {item.link && item.link !== "#" && index !== crumbs.length - 1 ? (
+            {/* Logic: Link only if it has a link, is not the last item, AND is not "Services" */}
+            {item.link && 
+             item.link !== "#" && 
+             index !== crumbs.length - 1 && 
+             item.name !== "Services" ? (
               <Link href={item.link}>{item.name}</Link>
             ) : (
               <span className={index === crumbs.length - 1 ? "active" : ""}>
