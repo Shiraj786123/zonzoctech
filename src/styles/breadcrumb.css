@@ -196,3 +196,19 @@
     color: #00448f;               /* Change color on hover without it being a link */
     transition: color 0.2s ease;
 }
+
+
+
+
+
+
+.no-link-hover {
+    cursor: default !important;   /* Standard arrow cursor */
+    pointer-events: auto;         /* Allows hover events to trigger */
+    transition: color 0.3s ease;  /* Smooth transition */
+    color: #64748b;               /* Your default text color */
+}
+
+.no-link-hover:hover {
+    color: #00448f !important;    /* Change to your desired hover color */
+}

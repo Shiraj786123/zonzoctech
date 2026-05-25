@@ -134,7 +134,9 @@ const Breadcrumb = () => {
              item.name !== "Services" ? (
               <Link href={item.link}>{item.name}</Link>
             ) : (
-              <span className={index === crumbs.length - 1 ? "active" : ""}>
+              <span 
+                className={`${index === crumbs.length - 1 ? "active" : ""} ${item.name === "Services" ? "no-link-hover" : ""}`}
+              >
                 {item.name}
               </span>
             )}
